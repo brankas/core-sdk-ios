@@ -1,0 +1,450 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
+import CryptoKit
+import Foundation
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public enum BankCode : Swift.Int {
+  case Mandiri
+  case BCA
+  case BNI
+  case BRI
+  case BDO
+  case BPI
+  case KB
+  case PNB
+  case UB
+  case MB
+  case RCBC
+  case UBC
+  case CLRB
+  case BCAC
+  case SCB
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DirectTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
+  public static let shared: DirectTapFramework.DirectTapSF
+  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false, isStaging: Swift.Bool = false)
+  public func checkout<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
+  public func checkoutWithinSameScreen<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?, showWithinSameScreen: Swift.Bool) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
+  public func cancel()
+  public func clearRememberMe()
+  @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
+  public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
+  public enum TapError : Swift.Error {
+    case invalidReturnAndFailUrl
+    public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+public enum Country : Swift.Int {
+  case ID
+  case PH
+  case TH
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct DismissAlert {
+  public var message: Swift.String
+  public var cancelButtonText: Swift.String
+  public var confirmButtonText: Swift.String
+  public init(message: Swift.String, confirmButtonText: Swift.String, cancelButtonText: Swift.String)
+}
+public struct Address {
+  public var addressLine1: Swift.String
+  public var addressLine2: Swift.String
+  public var city: Swift.String
+  public var province: Swift.String
+  public var country: Swift.String
+  public var zipCode: Swift.String
+  public init(addressLine1: Swift.String, addressLine2: Swift.String, city: Swift.String, province: Swift.String, country: Swift.String, zipCode: Swift.String)
+}
+public enum UniqueAmount : Swift.Int {
+  case NONE
+  case ADD
+  case SUBTRACT
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct DirectTapRequest {
+  public enum BrowserMode {
+    case None
+    case Safari
+    case WebView
+    public static func == (a: DirectTapFramework.DirectTapRequest.BrowserMode, b: DirectTapFramework.DirectTapRequest.BrowserMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var sourceAccount: DirectTapFramework.Account
+  public var destinationAccountId: Swift.String
+  public var amount: DirectTapFramework.Amount
+  public var memo: Swift.String
+  public var customer: DirectTapFramework.Customer
+  public var referenceId: Swift.String
+  public var client: DirectTapFramework.Client
+  public var browserMode: DirectTapFramework.DirectTapRequest.BrowserMode
+  public var dismissAlert: DirectTapFramework.DismissAlert?
+  public var useRememberMe: Swift.Bool
+  public var expiryDate: Foundation.Date?
+  public var uniqueAmount: DirectTapFramework.UniqueAmount
+  public init(sourceAccount: DirectTapFramework.Account, destinationAccountId: Swift.String, amount: DirectTapFramework.Amount, memo: Swift.String, customer: DirectTapFramework.Customer, referenceId: Swift.String, client: DirectTapFramework.Client, dismissAlert: DirectTapFramework.DismissAlert? = nil, useRememberMe: Swift.Bool = true, expiryDate: Foundation.Date? = nil, uniqueAmount: DirectTapFramework.UniqueAmount = UniqueAmount.NONE)
+}
+public enum Currency : Swift.Int {
+  case afn
+  case eur
+  case all
+  case dzd
+  case usd
+  case aoa
+  case xcd
+  case ars
+  case amd
+  case awg
+  case aud
+  case azn
+  case bsd
+  case bhd
+  case bdt
+  case byr
+  case bzd
+  case xof
+  case bmd
+  case btn
+  case bov
+  case bam
+  case bwp
+  case nok
+  case brl
+  case sgd
+  case bgn
+  case bif
+  case khr
+  case xaf
+  case cad
+  case cve
+  case kyd
+  case clp
+  case cny
+  case cop
+  case kmf
+  case cdf
+  case nzd
+  case crc
+  case hrk
+  case cuc
+  case czk
+  case dkk
+  case djf
+  case dop
+  case egp
+  case ern
+  case etb
+  case fkp
+  case fjd
+  case xpf
+  case gmd
+  case gel
+  case ghs
+  case gip
+  case gtq
+  case gbp
+  case gnf
+  case gyd
+  case hnl
+  case hkd
+  case huf
+  case isk
+  case inr
+  case idr
+  case irr
+  case iqd
+  case imp
+  case ils
+  case jmd
+  case jpy
+  case jep
+  case jod
+  case kzt
+  case kes
+  case kpw
+  case krw
+  case kwd
+  case kgs
+  case lak
+  case lbp
+  case lsl
+  case lrd
+  case lyd
+  case chf
+  case mkd
+  case mga
+  case mwk
+  case myr
+  case mvr
+  case mro
+  case mur
+  case mxn
+  case mdl
+  case mnt
+  case mad
+  case mzn
+  case mmk
+  case nad
+  case npr
+  case ang
+  case nio
+  case ngn
+  case omr
+  case pkr
+  case pgk
+  case pyg
+  case pen
+  case php
+  case pln
+  case qar
+  case ron
+  case rub
+  case rwf
+  case wst
+  case std
+  case sar
+  case rsd
+  case scr
+  case sll
+  case sbd
+  case sos
+  case zar
+  case ssp
+  case lkr
+  case shp
+  case sdg
+  case srd
+  case szl
+  case sek
+  case syp
+  case twd
+  case tjs
+  case tzs
+  case thb
+  case top
+  case ttd
+  case tnd
+  case `try`
+  case tmt
+  case ugx
+  case uah
+  case are
+  case uyu
+  case uzs
+  case vuv
+  case vef
+  case vnd
+  case yer
+  case zrn
+  case zmw
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CoreDelegate {
+  associatedtype T
+  func onResult(data: Self.T?, error: Swift.String?, errorCode: Swift.String?)
+}
+public struct DirectTapError {
+  public static let shared: DirectTapFramework.DirectTapError
+}
+public protocol CheckDelegate {
+  func hasCheckError()
+}
+public struct Customer {
+  public var firstName: Swift.String
+  public var lastName: Swift.String
+  public var email: Swift.String
+  public var mobileNumber: Swift.String
+  public var address: DirectTapFramework.Address?
+  public init(firstName: Swift.String, lastName: Swift.String, email: Swift.String, mobileNumber: Swift.String)
+}
+public struct Client {
+  public var displayName: Swift.String?
+  public var logoUrl: Swift.String?
+  public var returnUrl: Swift.String?
+  public var failUrl: Swift.String?
+  public var statementRetrieval: Swift.Bool
+  public init()
+}
+public struct Amount {
+  public var currency: DirectTapFramework.Currency
+  public var numInCents: Swift.String
+  public init(currency: DirectTapFramework.Currency, numInCents: Swift.String)
+}
+public enum DirectErrorCode : Swift.String {
+  case DIRIBDO4001
+  case DIRIBDO4002
+  case DIRIBDO4003
+  case DIRIBDO4004
+  case DIRIBDO4005
+  case DIRIBDO4006
+  case DIRIBDO4007
+  case DIRIBDO4008
+  case DIRIBDO4009
+  case DIRIBDO4010
+  case DIRIBDO4011
+  case DIRIBDO4012
+  case DIRIBDO4013
+  case DIRIBDO4014
+  case DIRIBDO4015
+  case DIRIBDO4016
+  case DIRIBDO4017
+  case DIRIBDO4018
+  case DIRIBDO4019
+  case DIRIBDO4020
+  case DIRIBDO4021
+  case DIRIBDO4022
+  case DIRIBDO4023
+  case DIRIBDO4024
+  case DIRIBDO4025
+  case DIRIBDO4026
+  case DIRIBDO4027
+  case DIRIBDO4028
+  case DIRIBDO4029
+  case DIRIBDO4030
+  case DIRIBDO4031
+  case DIRIBDO4032
+  case DIRIBDO4033
+  case DIRIBDO4034
+  case DIRIBDO4035
+  case DIRIBDO4037
+  case DIRIBDO5002
+  case DIRIBDO5003
+  case DIRIBDO5004
+  case DIRIBDO5005
+  case DIRIBDO5006
+  case DIRIBDO5007
+  case DIRIBDO5008
+  case DIRIBDO5009
+  case DIRIBDO5010
+  case DIRIBDO5011
+  case DIRIBDO5012
+  case DIRIBDO5013
+  case DIRIBDO5014
+  case DIRIBDO5015
+  case DIRIBDO5016
+  case DIRIBDO6001
+  case DIRIBDO6002
+  case DIRIBDO6003
+  case DIRIBDO6004
+  case DIRIBDO6005
+  case DIRIBDO6006
+  case DIRIBDO6007
+  case DIRIBDO6008
+  case DIRIBDO6009
+  case DIRIBDO6010
+  case DIRIBDO6011
+  case DIRIBDO6012
+  case DIRIBDO6013
+  case DIRIBDO6014
+  case DIRIBDO6015
+  case DIRIBDO6016
+  case DIRIBDO6017
+  case DIRIBDO6018
+  case DIRIBDO6019
+  case DIRIBDO6020
+  case DIRIBPI4001
+  case DIRIBPI4002
+  case DIRIBPI4003
+  case DIRIBPI4004
+  case DIRIBPI4005
+  case DIRIBPI4006
+  case DIRIBPI4007
+  case DIRIBPI4008
+  case DIRIBPI4009
+  case DIRIBPI4010
+  case DIRIBPI4011
+  case DIRIBPI4012
+  case DIRIBPI4013
+  case DIRIBPI4014
+  case DIRIBPI4015
+  case DIRIBPI4016
+  case DIRIBPI5001
+  case DIRIBPI5002
+  case DIRIBPI5003
+  case DIRIBPI5004
+  case DIRIBPI5005
+  case DIRIBPI5006
+  case DIRIBPI5007
+  case DIRIBPI5008
+  case DIRIBPI5009
+  case DIRIBPI5011
+  case DIRIBPI5013
+  case DIRIBPI5014
+  case DIRIBPI5015
+  case DIRIBPI5016
+  case DIRIBPI5017
+  case DIRIBPI5018
+  case DIRIBPI5019
+  case DIRIBPI5020
+  case DIRIBPI5021
+  case DIRIBPI6001
+  case DIRIBPI6003
+  case DIRIBPI6004
+  case DIRIBPI6005
+  case DIRIBPI6006
+  case DIRIBPI6007
+  case DIRIBPI6008
+  case DIRIBPI6009
+  case DIRIBPI6010
+  case DIRIBPI6011
+  case DIRIBPI6012
+  case DIRIBPI6013
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Account {
+  public var bankCode: DirectTapFramework.BankCode?
+  public var country: DirectTapFramework.Country
+  public init(country: DirectTapFramework.Country, bankCode: DirectTapFramework.BankCode? = nil)
+}
+extension DirectTapFramework.BankCode : Swift.Equatable {}
+extension DirectTapFramework.BankCode : Swift.Hashable {}
+extension DirectTapFramework.BankCode : Swift.RawRepresentable {}
+extension DirectTapFramework.DirectTapSF.TapError : Swift.Equatable {}
+extension DirectTapFramework.DirectTapSF.TapError : Swift.Hashable {}
+extension DirectTapFramework.Country : Swift.Equatable {}
+extension DirectTapFramework.Country : Swift.Hashable {}
+extension DirectTapFramework.Country : Swift.RawRepresentable {}
+extension DirectTapFramework.UniqueAmount : Swift.Equatable {}
+extension DirectTapFramework.UniqueAmount : Swift.Hashable {}
+extension DirectTapFramework.UniqueAmount : Swift.RawRepresentable {}
+extension DirectTapFramework.DirectTapRequest.BrowserMode : Swift.Equatable {}
+extension DirectTapFramework.DirectTapRequest.BrowserMode : Swift.Hashable {}
+extension DirectTapFramework.Currency : Swift.Equatable {}
+extension DirectTapFramework.Currency : Swift.Hashable {}
+extension DirectTapFramework.Currency : Swift.RawRepresentable {}
+extension DirectTapFramework.DirectErrorCode : Swift.Equatable {}
+extension DirectTapFramework.DirectErrorCode : Swift.Hashable {}
+extension DirectTapFramework.DirectErrorCode : Swift.RawRepresentable {}

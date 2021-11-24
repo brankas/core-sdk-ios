@@ -1,0 +1,4 @@
+framework module StatementTapFramework {
+  header "StatementTapFramework-Swift.h"
+  requires objc
+}

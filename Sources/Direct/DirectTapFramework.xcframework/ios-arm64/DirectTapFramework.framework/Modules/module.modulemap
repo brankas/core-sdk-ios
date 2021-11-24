@@ -1,0 +1,4 @@
+framework module DirectTapFramework {
+  header "DirectTapFramework-Swift.h"
+  requires objc
+}

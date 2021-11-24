@@ -8,8 +8,9 @@
 
   1. [Minimum Requirements](#requirements)
   2. [Installation](#installation)
-  3. [Initialization](#initialization)
-  4. [Usage](#usage)
+  3. [Update](#update)
+  4. [Initialization](#initialization)
+  5. [Usage](#usage)
 
 ***
 
@@ -22,12 +23,21 @@
 
 This set of instructions assumes that the IDE being used is Xcode
 
-1.  In order to integrate the framework, just drag and drop the **StatementTapFramework.framework** file in the project. <br/><br/> ![](screenshots/project_statement.png)<br/><br/>***Note:*** **The framework has 3 versions: iOS, iOS Simulator and Universal. Copy the contents of the appropriate folder based on the application target. Use universal if the target build is for both the simulator and a real iOS Device. Use iOS Framework when submitting to AppStore to avoid application from being rejected.**
+1. The framework can be integrated to the project through the use of **SPM (Swift Package Manager)**. To integrate, click your project > **Package Dependencies**, then the '+' button <br/><br/>![](screenshots/project.png)
 
-2. Select the project name in project navigator, then select the application target. Under that, select **General**. Scroll down to **Frameworks, Libraries, and Embedded Content**. Search for the **StatementTapFramework.framework** and under the Embed Tab, select **Embed & Sign** <br/><br/>![](screenshots/build_framework_statement.png)
+2. On the search bar, enter the URL: **https://github.com/brankas/core-sdk-ios**. Wait for the repository to be loaded then click **Add Package** <br/><br/>![](screenshots/repo.png)
 
-3. The application can now be run without any additional dependency.
+3. Check **StatementTap** then click on **Add Package** <br/><br/>![](screenshots/check_statement.png)
 
+4. Check if package has already been added as a dependency <br/><br/>![](screenshots/check_package.png)
+
+4. Go to **Frameworks, Libraries and Embedded Content** and check if the selected framework has been added <br/><br/>![](screenshots/framework.png)
+
+5. The application can now be run without any additional dependency.
+
+## Update
+
+To update the framework to the latest version, go to **File** > **Packages** > **Update to Latest Package Versions** <br/><br/>![](screenshots/update.png)
 
 ## Initialization
 

@@ -16,8 +16,9 @@
 
 ## Minimum Requirements
 
-1. **Xcode 10.2** but preferably the latest version
+1. **Xcode 12** but preferably the latest version
 2. Minimum Target iOS Deployment: **iOS 12**
+3. Minimum Swift Tools Version: **5.3** but preferably the latest version
 
 ## Installation
 

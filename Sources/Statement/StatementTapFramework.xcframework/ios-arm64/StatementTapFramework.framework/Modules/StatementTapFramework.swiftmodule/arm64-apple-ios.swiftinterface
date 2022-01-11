@@ -24,6 +24,7 @@ public enum BankCode : Swift.Int {
   case CLRB
   case BCAC
   case SCB
+  case PERMATA
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {

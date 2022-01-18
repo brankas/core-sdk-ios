@@ -57,12 +57,14 @@ public struct StatementTapRequest {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatementTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: StatementTapFramework.StatementTapSF
-  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false, isStaging: Swift.Bool = false)
+  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
   public func checkout<T>(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, delegate: T?, showBackButton: Swift.Bool = true) throws where T : StatementTapFramework.CoreDelegate, T.T == Swift.String
   public func checkoutWithinSameScreen<T>(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, delegate: T?, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws where T : StatementTapFramework.CoreDelegate, T.T == Swift.String
   public func cancel()
   public func clearRememberMe()
   public func initSecurityCheck(delegate: StatementTapFramework.CheckDelegate)
+  public func getBundleSeedID() -> Swift.String?
+  public func getFrameworkVersion() -> Swift.String
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: StatementTapFramework.StatementTapSF.TapError, b: StatementTapFramework.StatementTapSF.TapError) -> Swift.Bool

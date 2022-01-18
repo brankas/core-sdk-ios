@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.4.0 - 2022-01-13
+
+### Added
+
+- function for retrieving the current Framework Version
+- function for retrieving the Mobile Application Signature (Bundle Identifier and Seed ID)
+- support for transactional retries within the WebView
+
 ## 1.3.0 - 2022-01-07
 
 ### Fixed

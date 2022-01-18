@@ -33,13 +33,15 @@ public enum BankCode : Swift.Int {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DirectTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: DirectTapFramework.DirectTapSF
-  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false, isStaging: Swift.Bool = false)
+  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
   public func checkout<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?, showBackButton: Swift.Bool = true) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
   public func checkoutWithinSameScreen<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
   public func cancel()
   public func clearRememberMe()
   @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
   public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
+  public func getBundleSeedID() -> Swift.String?
+  public func getFrameworkVersion() -> Swift.String
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool

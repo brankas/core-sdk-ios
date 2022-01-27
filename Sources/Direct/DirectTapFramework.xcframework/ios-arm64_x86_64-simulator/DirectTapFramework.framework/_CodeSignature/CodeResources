@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CgaenZIfQkZi5hew7fDXQQfROb0=
+		GenEXyUwkL3QKNN3MGmYt8o1LzA=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cjFgfqmgEoDnHameF96ptW8fD6w=
+		P7/aMPBBvBnx/TCvwSAZ0DCetEg=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		cjFgfqmgEoDnHameF96ptW8fD6w=
+		P7/aMPBBvBnx/TCvwSAZ0DCetEg=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MJQPhz9YW2EffqkmVHvPdH+Qr9U=
+		UtGJ1UwnGmKSueZ3hRqEKn3C2ro=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		MJQPhz9YW2EffqkmVHvPdH+Qr9U=
+		UtGJ1UwnGmKSueZ3hRqEKn3C2ro=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OiV2HXBDMH9rvWQR2dvknWBHfn4pu6+rXVsWvTF7ahw=
+			PcRTiO7/7y9gG1xnuMqsU/qDs6v43bNe7PN2ePUBAJM=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OiV2HXBDMH9rvWQR2dvknWBHfn4pu6+rXVsWvTF7ahw=
+			PcRTiO7/7y9gG1xnuMqsU/qDs6v43bNe7PN2ePUBAJM=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VTQ2b+SJwKgRdHwlx+bUMMyyXwS0ozaauMZcmITWZ5A=
+			elEcehbxOD4Z+xqt7/+HMSJJWsgFg26LcQbSjC4JmyM=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VTQ2b+SJwKgRdHwlx+bUMMyyXwS0ozaauMZcmITWZ5A=
+			elEcehbxOD4Z+xqt7/+HMSJJWsgFg26LcQbSjC4JmyM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

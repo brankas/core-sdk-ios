@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2022-02-03
+
+### Changed
+
+- removed **None** option from **BrowserMode** enum
+- protocol **CoreDelegate** parameter to closure in both **checkout** and **checkoutWithinSameScreen** functions to make calling of the functions easier and more convenient
+
+### Added
+
+- separate function **retrieveCheckoutURL** to get the URL instead of launching within the internal WebView. This is a replacement to the **None** Option from **BrowserMode**
+- internal calling of **Retrieve Transaction** API Service to return the **Transaction** object every after Tap Web Session
+- **getSourceBanks()** function to retrieve all available source banks for the specified destination bank
+
 ## 2.7.0 - 2022-01-26
 
 ### Changed

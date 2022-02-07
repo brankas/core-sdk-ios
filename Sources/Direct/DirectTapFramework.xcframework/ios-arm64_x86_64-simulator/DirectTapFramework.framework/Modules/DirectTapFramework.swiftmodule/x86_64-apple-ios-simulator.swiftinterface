@@ -25,6 +25,8 @@ public enum BankCode : Swift.Int {
   case BCAC
   case SCB
   case PERMATA
+  case Dummy_Bank
+  case GCash
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -34,14 +36,16 @@ public enum BankCode : Swift.Int {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DirectTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: DirectTapFramework.DirectTapSF
   public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
-  public func checkout<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?, showBackButton: Swift.Bool = true) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
-  public func checkoutWithinSameScreen<T>(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, delegate: T?, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws where T : DirectTapFramework.CoreDelegate, T.T == Swift.String
+  public func checkout(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
+  public func checkoutWithinSameScreen(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
+  public func retrieveCheckoutURL(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
   public func cancel()
   public func clearRememberMe()
   @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
   public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
+  public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.BankCode, closure: @escaping ([DirectTapFramework.BankCode], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
@@ -87,9 +91,22 @@ public enum UniqueAmount : Swift.Int {
     get
   }
 }
+public struct Transaction {
+  public var id: Swift.String
+  public var bankCode: DirectTapFramework.BankCode
+  public var country: DirectTapFramework.Country
+  public var amount: DirectTapFramework.Amount
+  public var bankFee: DirectTapFramework.Amount
+  public var referenceId: Swift.String
+  public var status: DirectTapFramework.Status
+  public var statusCode: Swift.String
+  public var statusMessage: Swift.String?
+  public var finishedDate: Foundation.Date
+  public var createdDate: Foundation.Date
+  public var updatedDate: Foundation.Date
+}
 public struct DirectTapRequest {
   public enum BrowserMode {
-    case None
     case Safari
     case WebView
     public static func == (a: DirectTapFramework.DirectTapRequest.BrowserMode, b: DirectTapFramework.DirectTapRequest.BrowserMode) -> Swift.Bool
@@ -432,6 +449,29 @@ public struct Account {
   public var country: DirectTapFramework.Country
   public init(country: DirectTapFramework.Country, bankCode: DirectTapFramework.BankCode? = nil)
 }
+public enum Status : Swift.Int {
+  case PENDING
+  case AWAITING_TFA
+  case SUCCESS
+  case ERROR
+  case LOGIN_ERROR
+  case INVOICE_CREATED
+  case AWAITING_LOGIN
+  case AWAITING_LOGIN_TFA
+  case AWAITING_ACCOUNT_SELECTION
+  case AWAITING_TRANSFER_TFA
+  case IN_PROGRESS
+  case EXPIRED
+  case FLAGGED
+  case CANCELLED
+  case DENIED
+  case FAILED
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 extension DirectTapFramework.BankCode : Swift.Equatable {}
 extension DirectTapFramework.BankCode : Swift.Hashable {}
 extension DirectTapFramework.BankCode : Swift.RawRepresentable {}
@@ -451,3 +491,6 @@ extension DirectTapFramework.Currency : Swift.RawRepresentable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Equatable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Hashable {}
 extension DirectTapFramework.DirectErrorCode : Swift.RawRepresentable {}
+extension DirectTapFramework.Status : Swift.Equatable {}
+extension DirectTapFramework.Status : Swift.Hashable {}
+extension DirectTapFramework.Status : Swift.RawRepresentable {}

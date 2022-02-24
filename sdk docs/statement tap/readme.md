@@ -1,6 +1,6 @@
 # Statement Tap Framework for iOS
 ***
-*Version:* 1.4.0
+*Version:* 2.0.0
 ***
 
 
@@ -74,7 +74,7 @@ In order to use the checkout function, a **StatementTapRequest** is needed to be
 
 7. **redirectDuration** - refers to the time in seconds when the user should be redirected upon finishing statement retrieval. The default value is *60 seconds*.
 
-8. **browserMode** - **None** (checkout URL will be returned and the developer is given the option to launch Tap Web Application through his own WebView), **Safari** (Tap Web Application is launched through Safari Web Browser) and **WebView** (Tap Web application is launched through the built-in WKWebView from the Framework)<br/><br/>
+8. **browserMode** - **Safari** (Tap Web Application is launched through Safari Web Browser) and **WebView** (Tap Web application is launched through the built-in WKWebView from the Framework)<br/><br/>
 ***NOTE:*** When using the **WebView** BrowserMode, ensure that the ViewController to be passed in the checkout function is attached to a **UINavigationController** so that the Framework can provide a back button.
 
 9. **dismissAlert** - pertains to the showing of alert dialog when closing the WebView. It consists of **message**, **positiveButtonText** and **negativeButtonText**. Just set this value to null to remove the alert dialog when closing the application.
@@ -83,6 +83,8 @@ In order to use the checkout function, a **StatementTapRequest** is needed to be
 
 11. **useRememberMe** - pertains to using the remember me feature of the Tap Web Application (default value is true and will not be showing up if set to false)
 
+12. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
+
 Here is a sample on how to use it and call:
 
 ```swift
@@ -90,7 +92,7 @@ Here is a sample on how to use it and call:
 import UIKit
 import StatementTapFramework
 
-class ViewController: UIViewController, CoreDelegate {
+class ViewController: UIViewController {
     typealias T = String
     
     override func viewDidLoad() {
@@ -99,38 +101,53 @@ class ViewController: UIViewController, CoreDelegate {
         
         StatementTapSF.shared.initialize(apiKey: "API KEY")
 
-        let request = StatementTapRequest(country: Country.PH, bankCodes: nil, externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, dismissAlert: nil, useRememberMe: true)
+        let request = StatementTapRequest(country: Country.PH, bankCodes: nil, externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, isAutoConsent: false, dismissAlert: nil, useRememberMe: true, statementRetrievalRequest: StatementRetrievalRequest())
 
         do {
-            try StatementTapSF.shared.checkout(statementTapRequest: request, vc: self, delegate: self)
-        } catch {
-            print("Error: \(error)")
-        }
-    }
-    
-    func onResult(data: String?, error: String?, errorCode: String?) {
-        if let str = data {
-            print("STATEMENT ID: \(str)")
-        }
+            let retrieveStatements = { (data: Any?, error: String?) in
+                if let str = data as? String {
+            		if let err = error {
+                		print("Statement ID: \(str)\nError: \(err)")
+            		}
+            		else {
+                		print("Statement ID: \(str)")
+            		}
+        	}
         
-        if let err = error {
-            print("Error Logs: \(err) \(errorCode)")
+        	else if let statements = data as? [Statement] {
+            		var message = "Statements"
+            		let dateFormatter = DateFormatter()
+           	 	dateFormatter.dateFormat = "MM-dd-yyyy"
+            
+            		if statements.isEmpty {
+                		message += "\n\n\nList is Empty"
+            		}
+            		statements.forEach { statement in
+                		statement.transactions.forEach { transaction in
+                    			let amount = transaction.amount
+                    			message += "\n Account: \(statement.account.holderName)"
+                    			message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
+                    			message += String(describing: amount.currency)
+                    			message += " \(Double(amount.numInCents) ?? 0 / 100)"
+                    			message += " \(String(describing: transaction.type))"
+                		}
+            		}
+            		print(message)
+        	}
+        
+        	else {
+            		if let err = error {
+                		showAlert(message: "Error: \(err)")
+            		}
+        	}
+            }
+            try StatementTapSF.shared.checkout(statementTapRequest: request, vc: self, closure: retrieveStatements, showBackButton: true)
+        } catch {
+            showAlert(message: "Error: \(error)")
         }
     }
 }
 ```
-
-***NOTE:*** If **browserMode** has been set to **None**, the redirect URL for the Tap Web Application will be returned after checkout has been successful.
-
-After transaction, to detect if it is successful, the web browser will be redirected to a similar URL:
-**https://tap.sandbox.bnk.to/www.google.com?statement_id=f3f53e0c-720d-428e-8c7a-7a95671ae32c&status=2**
-
-The url will be composed of:
-* Return url
-* Statement Id
-* and status
-
-If the transaction failed, it will be redirected to this URL: **https://tap.sandbox.bnk.to/error**
 
 
 

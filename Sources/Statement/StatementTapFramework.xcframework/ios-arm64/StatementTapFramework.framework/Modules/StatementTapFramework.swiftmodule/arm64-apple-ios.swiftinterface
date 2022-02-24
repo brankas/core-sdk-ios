@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StatementTapFramework
 import CryptoKit
 import Foundation
@@ -8,6 +8,17 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
+public enum TransactionStatus : Swift.Int {
+  case UNKNOWN_STATUS
+  case SUCCESS
+  case PENDING
+  case UNRECOGNIZED
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum BankCode : Swift.Int {
   case Mandiri
   case BCA
@@ -15,6 +26,7 @@ public enum BankCode : Swift.Int {
   case BRI
   case BDO
   case BPI
+  case BPIC
   case KB
   case PNB
   case UB
@@ -25,6 +37,8 @@ public enum BankCode : Swift.Int {
   case BCAC
   case SCB
   case PERMATA
+  case Dummy_Bank
+  case GCash
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -33,7 +47,6 @@ public enum BankCode : Swift.Int {
 }
 public struct StatementTapRequest {
   public enum BrowserMode {
-    case None
     case Safari
     case WebView
     public static func == (a: StatementTapFramework.StatementTapRequest.BrowserMode, b: StatementTapFramework.StatementTapRequest.BrowserMode) -> Swift.Bool
@@ -53,18 +66,187 @@ public struct StatementTapRequest {
   public var dismissAlert: StatementTapFramework.DismissAlert?
   public var isAutoConsent: Swift.Bool
   public var useRememberMe: Swift.Bool
-  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.BankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true)
+  public var statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest?
+  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.BankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil)
+}
+public enum Currency : Swift.Int {
+  case afn
+  case eur
+  case all
+  case dzd
+  case usd
+  case aoa
+  case xcd
+  case ars
+  case amd
+  case awg
+  case aud
+  case azn
+  case bsd
+  case bhd
+  case bdt
+  case byr
+  case bzd
+  case xof
+  case bmd
+  case btn
+  case bov
+  case bam
+  case bwp
+  case nok
+  case brl
+  case sgd
+  case bgn
+  case bif
+  case khr
+  case xaf
+  case cad
+  case cve
+  case kyd
+  case clp
+  case cny
+  case cop
+  case kmf
+  case cdf
+  case nzd
+  case crc
+  case hrk
+  case cuc
+  case czk
+  case dkk
+  case djf
+  case dop
+  case egp
+  case ern
+  case etb
+  case fkp
+  case fjd
+  case xpf
+  case gmd
+  case gel
+  case ghs
+  case gip
+  case gtq
+  case gbp
+  case gnf
+  case gyd
+  case hnl
+  case hkd
+  case huf
+  case isk
+  case inr
+  case idr
+  case irr
+  case iqd
+  case imp
+  case ils
+  case jmd
+  case jpy
+  case jep
+  case jod
+  case kzt
+  case kes
+  case kpw
+  case krw
+  case kwd
+  case kgs
+  case lak
+  case lbp
+  case lsl
+  case lrd
+  case lyd
+  case chf
+  case mkd
+  case mga
+  case mwk
+  case myr
+  case mvr
+  case mro
+  case mur
+  case mxn
+  case mdl
+  case mnt
+  case mad
+  case mzn
+  case mmk
+  case nad
+  case npr
+  case ang
+  case nio
+  case ngn
+  case omr
+  case pkr
+  case pgk
+  case pyg
+  case pen
+  case php
+  case pln
+  case qar
+  case ron
+  case rub
+  case rwf
+  case wst
+  case std
+  case sar
+  case rsd
+  case scr
+  case sll
+  case sbd
+  case sos
+  case zar
+  case ssp
+  case lkr
+  case shp
+  case sdg
+  case srd
+  case szl
+  case sek
+  case syp
+  case twd
+  case tjs
+  case tzs
+  case thb
+  case top
+  case ttd
+  case tnd
+  case `try`
+  case tmt
+  case ugx
+  case uah
+  case are
+  case uyu
+  case uzs
+  case vuv
+  case vef
+  case vnd
+  case yer
+  case zrn
+  case zmw
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct StatementAccount {
+  public var id: Swift.String
+  public var balance: StatementTapFramework.Amount
+  public var number: Swift.String
+  public var bankCode: StatementTapFramework.BankCode
+  public var holderName: Swift.String
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatementTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: StatementTapFramework.StatementTapSF
   public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
-  public func checkout<T>(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, delegate: T?, showBackButton: Swift.Bool = true) throws where T : StatementTapFramework.CoreDelegate, T.T == Swift.String
-  public func checkoutWithinSameScreen<T>(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, delegate: T?, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws where T : StatementTapFramework.CoreDelegate, T.T == Swift.String
+  public func checkout(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
+  public func checkoutWithinSameScreen(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
+  public func retrieveCheckoutURL(tapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
   public func cancel()
   public func clearRememberMe()
   public func initSecurityCheck(delegate: StatementTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
+  public func getEnabledBanks(country: StatementTapFramework.Country, closure: @escaping ([StatementTapFramework.BankCode], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: StatementTapFramework.StatementTapSF.TapError, b: StatementTapFramework.StatementTapSF.TapError) -> Swift.Bool
@@ -216,22 +398,67 @@ public enum StatementErrorCode : Swift.String {
     get
   }
 }
-public protocol CoreDelegate {
-  associatedtype T
-  func onResult(data: Self.T?, error: Swift.String?, errorCode: Swift.String?)
+public struct StatementTransaction {
+  public var id: Swift.String
+  public var amount: StatementTapFramework.Amount
+  public var balance: StatementTapFramework.Amount
+  public var date: Foundation.Date
+  public var status: StatementTapFramework.TransactionStatus
+  public var type: StatementTapFramework.TransactionType
+  public var from: StatementTapFramework.StatementAccount
+  public var to: StatementTapFramework.StatementAccount
+}
+public struct Statement {
+  public var id: Swift.String
+  public var account: StatementTapFramework.StatementAccount
+  public var startDate: Foundation.Date
+  public var endDate: Foundation.Date
+  public var transactions: [StatementTapFramework.StatementTransaction]
+}
+public struct StatementRetrievalRequest {
+  public var startDate: Foundation.Date
+  public var endDate: Foundation.Date
+  public init(startDate: Foundation.Date = Date.yesterday, endDate: Foundation.Date = Date())
+}
+extension Foundation.Date {
+  public static var yesterday: Foundation.Date {
+    get
+  }
 }
 public protocol CheckDelegate {
   func hasCheckError()
+}
+public struct Amount {
+  public var currency: StatementTapFramework.Currency
+  public var numInCents: Swift.String
+  public init(currency: StatementTapFramework.Currency, numInCents: Swift.String)
 }
 public struct StatementTapError {
   public static let shared: StatementTapFramework.StatementTapError
   public func getErrorMessage(errorCode: StatementTapFramework.StatementErrorCode) -> Swift.String
 }
+public enum TransactionType : Swift.Int {
+  case UNKNOWN_TYPE
+  case CREDIT
+  case DEBIT
+  case UNRECOGNIZED
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension StatementTapFramework.TransactionStatus : Swift.Equatable {}
+extension StatementTapFramework.TransactionStatus : Swift.Hashable {}
+extension StatementTapFramework.TransactionStatus : Swift.RawRepresentable {}
 extension StatementTapFramework.BankCode : Swift.Equatable {}
 extension StatementTapFramework.BankCode : Swift.Hashable {}
 extension StatementTapFramework.BankCode : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Equatable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Hashable {}
+extension StatementTapFramework.Currency : Swift.Equatable {}
+extension StatementTapFramework.Currency : Swift.Hashable {}
+extension StatementTapFramework.Currency : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementTapSF.TapError : Swift.Equatable {}
 extension StatementTapFramework.StatementTapSF.TapError : Swift.Hashable {}
 extension StatementTapFramework.Country : Swift.Equatable {}
@@ -240,3 +467,6 @@ extension StatementTapFramework.Country : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementErrorCode : Swift.Equatable {}
 extension StatementTapFramework.StatementErrorCode : Swift.Hashable {}
 extension StatementTapFramework.StatementErrorCode : Swift.RawRepresentable {}
+extension StatementTapFramework.TransactionType : Swift.Equatable {}
+extension StatementTapFramework.TransactionType : Swift.Hashable {}
+extension StatementTapFramework.TransactionType : Swift.RawRepresentable {}

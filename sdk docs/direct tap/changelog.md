@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2022-04-01
+
+### Changed
+
+-  getSourceBanks parameter **closure: @escaping ([BankCode], String?) -> Void** to **closure: @escaping ([Bank], String?) -> Void**
+
+### Added
+
+-  **Bank** class that includes **FundTransferLimit** (pertains to bank transfer minimum and maximum amounts), **FundTransferFee** (pertains to interbank and interbank transfer fees, if there are), **country**, **logo URL**, **name of the bank** and its corresponding **BankCode**
+
 ## 3.0.0 - 2022-02-03
 
 ### Changed

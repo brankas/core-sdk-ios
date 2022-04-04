@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
 import CryptoKit
 import Foundation
@@ -8,6 +8,35 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
+public struct FundTransferFee {
+  public var idOnlineTransferLimit: DirectTapFramework.Amount
+  public var idOnlineTransferFee: DirectTapFramework.Amount
+  public var idllgTransferLimit: DirectTapFramework.Amount
+  public var idllgTransferFee: DirectTapFramework.Amount
+  public var idrtgsTransferFee: DirectTapFramework.Amount
+  public var phInstapayTransferLimit: DirectTapFramework.Amount
+  public var phInstapayTransferFee: DirectTapFramework.Amount
+  public var phPesonetTransferFee: DirectTapFramework.Amount
+  public var intrabankTransferFee: DirectTapFramework.Amount
+  public init()
+}
+public struct FundTransferLimit {
+  public var currency: DirectTapFramework.Currency
+  public var interbankMinLimit: DirectTapFramework.Amount
+  public var interbankMaxLimit: DirectTapFramework.Amount
+  public var intrabankMinLimit: DirectTapFramework.Amount
+  public var intrabankMaxLimit: DirectTapFramework.Amount
+  public init()
+}
+public struct Bank {
+  public var bankCode: DirectTapFramework.BankCode
+  public var country: DirectTapFramework.Country
+  public var title: Swift.String
+  public var logoUrl: Swift.String
+  public var fundTransferLimit: DirectTapFramework.FundTransferLimit
+  public var fundTransferFee: DirectTapFramework.FundTransferFee
+  public init(bankCode: DirectTapFramework.BankCode, country: DirectTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: DirectTapFramework.FundTransferLimit, fundTransferFee: DirectTapFramework.FundTransferFee)
+}
 public enum BankCode : Swift.Int {
   case Mandiri
   case BCA
@@ -15,6 +44,7 @@ public enum BankCode : Swift.Int {
   case BRI
   case BDO
   case BPI
+  case BPIC
   case KB
   case PNB
   case UB
@@ -38,14 +68,14 @@ public enum BankCode : Swift.Int {
   public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
   public func checkout(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
   public func checkoutWithinSameScreen(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
-  public func retrieveCheckoutURL(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
+  public func retrieveCheckoutURL(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
   public func cancel()
   public func clearRememberMe()
   @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
   public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
-  public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.BankCode, closure: @escaping ([DirectTapFramework.BankCode], Swift.String?) -> Swift.Void)
+  public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.BankCode, closure: @escaping ([DirectTapFramework.Bank], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
@@ -282,15 +312,11 @@ public enum Currency : Swift.Int {
   case yer
   case zrn
   case zmw
-  public init?(rawValue: Swift.Int)
+  public init(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
-}
-public protocol CoreDelegate {
-  associatedtype T
-  func onResult(data: Self.T?, error: Swift.String?, errorCode: Swift.String?)
 }
 public struct DirectTapError {
   public static let shared: DirectTapFramework.DirectTapError

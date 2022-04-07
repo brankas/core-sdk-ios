@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.1 - 2022-04-07
+
+### Changed
+
+-  **Bank logoUrl** format from svg to png
+
 ## 3.1.0 - 2022-04-01
 
 ### Changed

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>StatementTransaction Structure Reference</title>
+    <title>FundTransferLimit Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/StatementTransaction" class="dashAnchor"></a>
-    <a title="StatementTransaction Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/FundTransferLimit" class="dashAnchor"></a>
+    <a title="FundTransferLimit Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        StatementTransaction Structure Reference
+        FundTransferLimit Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -134,11 +134,11 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>StatementTransaction</h1>
+            <h1>FundTransferLimit</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StatementTransaction</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FundTransferLimit</span></code></pre>
 
                 </div>
               </div>
@@ -150,9 +150,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV2idSSvp"></a>
-                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV2idSSvp">id</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitV8currencyAA8CurrencyOvp"></a>
+                    <a name="//apple_ref/swift/Property/currency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitV8currencyAA8CurrencyOvp">currency</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,14 +160,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the transaction identifier</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt"><a href="../Enums/Currency.html">Currency</a></span></code></pre>
 
                         </div>
                       </div>
@@ -177,9 +176,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV6amountAA6AmountVvp"></a>
-                    <a name="//apple_ref/swift/Property/amount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV6amountAA6AmountVvp">amount</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitV012interbankMinF0AA6AmountVvp"></a>
+                    <a name="//apple_ref/swift/Property/interbankMinLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitV012interbankMinF0AA6AmountVvp">interbankMinLimit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,14 +186,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the monetary value involved in the transaction either credited or debited</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">interbankMinLimit</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
 
                         </div>
                       </div>
@@ -204,9 +202,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV7balanceAA6AmountVvp"></a>
-                    <a name="//apple_ref/swift/Property/balance" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV7balanceAA6AmountVvp">balance</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitV012interbankMaxF0AA6AmountVvp"></a>
+                    <a name="//apple_ref/swift/Property/interbankMaxLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitV012interbankMaxF0AA6AmountVvp">interbankMaxLimit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,14 +212,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the monetary value involved in the transaction either credited or debited</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">interbankMaxLimit</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
 
                         </div>
                       </div>
@@ -231,9 +228,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV4date10Foundation4DateVvp"></a>
-                    <a name="//apple_ref/swift/Property/date" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV4date10Foundation4DateVvp">date</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitV012intrabankMinF0AA6AmountVvp"></a>
+                    <a name="//apple_ref/swift/Property/intrabankMinLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitV012intrabankMinF0AA6AmountVvp">intrabankMinLimit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -241,14 +238,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the transaction date</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">intrabankMinLimit</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
 
                         </div>
                       </div>
@@ -258,9 +254,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV6statusAA0D6StatusOvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV6statusAA0D6StatusOvp">status</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitV012intrabankMaxF0AA6AmountVvp"></a>
+                    <a name="//apple_ref/swift/Property/intrabankMaxLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitV012intrabankMaxF0AA6AmountVvp">intrabankMaxLimit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -268,14 +264,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the transaction status either pending or successfu</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/TransactionStatus.html">TransactionStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">intrabankMaxLimit</span><span class="p">:</span> <span class="kt"><a href="../Structs/Amount.html">Amount</a></span></code></pre>
 
                         </div>
                       </div>
@@ -285,9 +280,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV4typeAA0D4TypeOvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV4typeAA0D4TypeOvp">type</a>
+                    <a name="/s:21StatementTapFramework17FundTransferLimitVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:21StatementTapFramework17FundTransferLimitVACycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,68 +290,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>refers to the transaction type either credit or debit</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/TransactionType.html">TransactionType</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV4fromAA0A7AccountVvp"></a>
-                    <a name="//apple_ref/swift/Property/from" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV4fromAA0A7AccountVvp">from</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>refers to the source account</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../Structs/StatementAccount.html">StatementAccount</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:21StatementTapFramework0A11TransactionV2toAA0A7AccountVvp"></a>
-                    <a name="//apple_ref/swift/Property/to" class="dashAnchor"></a>
-                    <a class="token" href="#/s:21StatementTapFramework0A11TransactionV2toAA0A7AccountVvp">to</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>refers to the destination account</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/StatementAccount.html">StatementAccount</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

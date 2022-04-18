@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 2022-04-18
+
+### Changed
+
+-  getEnabledBanks parameter **closure: @escaping ([BankCode], String?) -> Void** to **closure: @escaping ([Bank], String?) -> Void**
+
 ## 2.0.0 - 2022-02-24
 
 ### Added

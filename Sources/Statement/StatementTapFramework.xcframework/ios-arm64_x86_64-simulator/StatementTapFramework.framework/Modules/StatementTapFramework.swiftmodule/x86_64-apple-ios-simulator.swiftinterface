@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StatementTapFramework
 import CryptoKit
 import Foundation
@@ -8,67 +8,6 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
-public enum TransactionStatus : Swift.Int {
-  case UNKNOWN_STATUS
-  case SUCCESS
-  case PENDING
-  case UNRECOGNIZED
-  public init(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum BankCode : Swift.Int {
-  case Mandiri
-  case BCA
-  case BNI
-  case BRI
-  case BDO
-  case BPI
-  case BPIC
-  case KB
-  case PNB
-  case UB
-  case MB
-  case RCBC
-  case UBC
-  case CLRB
-  case BCAC
-  case SCB
-  case PERMATA
-  case Dummy_Bank
-  case GCash
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct StatementTapRequest {
-  public enum BrowserMode {
-    case Safari
-    case WebView
-    public static func == (a: StatementTapFramework.StatementTapRequest.BrowserMode, b: StatementTapFramework.StatementTapRequest.BrowserMode) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public var country: StatementTapFramework.Country
-  public var bankCodes: [StatementTapFramework.BankCode]?
-  public var externalId: Swift.String
-  public var successURL: Swift.String
-  public var failURL: Swift.String
-  public var organizationName: Swift.String
-  public var redirectDuration: Swift.Int64
-  public var browserMode: StatementTapFramework.StatementTapRequest.BrowserMode
-  public var dismissAlert: StatementTapFramework.DismissAlert?
-  public var isAutoConsent: Swift.Bool
-  public var useRememberMe: Swift.Bool
-  public var statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest?
-  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.BankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil)
-}
 public enum Currency : Swift.Int {
   case afn
   case eur
@@ -228,6 +167,72 @@ public enum Currency : Swift.Int {
     get
   }
 }
+public enum TransactionStatus : Swift.Int {
+  case UNKNOWN_STATUS
+  case SUCCESS
+  case PENDING
+  case UNRECOGNIZED
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum BankCode : Swift.Int {
+  case Mandiri
+  case BCA
+  case BNI
+  case BRI
+  case BDO
+  case BPI
+  case BPIC
+  case KB
+  case PNB
+  case UB
+  case MB
+  case RCBC
+  case UBC
+  case CLRB
+  case BCAC
+  case SCB
+  case PERMATA
+  case Dummy_Bank
+  case GCash
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct StatementTapRequest {
+  public enum BrowserMode {
+    case Safari
+    case WebView
+    public static func == (a: StatementTapFramework.StatementTapRequest.BrowserMode, b: StatementTapFramework.StatementTapRequest.BrowserMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var country: StatementTapFramework.Country
+  public var bankCodes: [StatementTapFramework.BankCode]?
+  public var externalId: Swift.String
+  public var successURL: Swift.String
+  public var failURL: Swift.String
+  public var organizationName: Swift.String
+  public var redirectDuration: Swift.Int64
+  public var browserMode: StatementTapFramework.StatementTapRequest.BrowserMode
+  public var dismissAlert: StatementTapFramework.DismissAlert?
+  public var isAutoConsent: Swift.Bool
+  public var useRememberMe: Swift.Bool
+  public var statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest?
+  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.BankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil)
+}
+public struct Account {
+  public var bankCode: StatementTapFramework.BankCode?
+  public var country: StatementTapFramework.Country
+  public init(country: StatementTapFramework.Country, bankCode: StatementTapFramework.BankCode? = nil)
+}
 public struct StatementAccount {
   public var id: Swift.String
   public var balance: StatementTapFramework.Amount
@@ -246,7 +251,7 @@ public struct StatementAccount {
   public func initSecurityCheck(delegate: StatementTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
-  public func getEnabledBanks(country: StatementTapFramework.Country, closure: @escaping ([StatementTapFramework.BankCode], Swift.String?) -> Swift.Void)
+  public func getEnabledBanks(country: StatementTapFramework.Country, closure: @escaping ([StatementTapFramework.Bank], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: StatementTapFramework.StatementTapSF.TapError, b: StatementTapFramework.StatementTapSF.TapError) -> Swift.Bool
@@ -256,6 +261,27 @@ public struct StatementAccount {
     }
   }
   @objc deinit
+}
+public struct Bank {
+  public var bankCode: StatementTapFramework.BankCode
+  public var country: StatementTapFramework.Country
+  public var title: Swift.String
+  public var logoUrl: Swift.String
+  public var fundTransferLimit: StatementTapFramework.FundTransferLimit?
+  public var fundTransferFee: StatementTapFramework.FundTransferFee?
+  public init(bankCode: StatementTapFramework.BankCode, country: StatementTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: StatementTapFramework.FundTransferLimit?, fundTransferFee: StatementTapFramework.FundTransferFee?)
+}
+public struct FundTransferFee {
+  public var idOnlineTransferLimit: StatementTapFramework.Amount
+  public var idOnlineTransferFee: StatementTapFramework.Amount
+  public var idllgTransferLimit: StatementTapFramework.Amount
+  public var idllgTransferFee: StatementTapFramework.Amount
+  public var idrtgsTransferFee: StatementTapFramework.Amount
+  public var phInstapayTransferLimit: StatementTapFramework.Amount
+  public var phInstapayTransferFee: StatementTapFramework.Amount
+  public var phPesonetTransferFee: StatementTapFramework.Amount
+  public var intrabankTransferFee: StatementTapFramework.Amount
+  public init()
 }
 public enum Country : Swift.Int {
   case ID
@@ -272,6 +298,14 @@ public struct DismissAlert {
   public var cancelButtonText: Swift.String
   public var confirmButtonText: Swift.String
   public init(message: Swift.String, confirmButtonText: Swift.String, cancelButtonText: Swift.String)
+}
+public struct FundTransferLimit {
+  public var currency: StatementTapFramework.Currency
+  public var interbankMinLimit: StatementTapFramework.Amount
+  public var interbankMaxLimit: StatementTapFramework.Amount
+  public var intrabankMinLimit: StatementTapFramework.Amount
+  public var intrabankMaxLimit: StatementTapFramework.Amount
+  public init()
 }
 public enum StatementErrorCode : Swift.String {
   case STTIBDO4001
@@ -448,6 +482,9 @@ public enum TransactionType : Swift.Int {
     get
   }
 }
+extension StatementTapFramework.Currency : Swift.Equatable {}
+extension StatementTapFramework.Currency : Swift.Hashable {}
+extension StatementTapFramework.Currency : Swift.RawRepresentable {}
 extension StatementTapFramework.TransactionStatus : Swift.Equatable {}
 extension StatementTapFramework.TransactionStatus : Swift.Hashable {}
 extension StatementTapFramework.TransactionStatus : Swift.RawRepresentable {}
@@ -456,9 +493,6 @@ extension StatementTapFramework.BankCode : Swift.Hashable {}
 extension StatementTapFramework.BankCode : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Equatable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Hashable {}
-extension StatementTapFramework.Currency : Swift.Equatable {}
-extension StatementTapFramework.Currency : Swift.Hashable {}
-extension StatementTapFramework.Currency : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementTapSF.TapError : Swift.Equatable {}
 extension StatementTapFramework.StatementTapSF.TapError : Swift.Hashable {}
 extension StatementTapFramework.Country : Swift.Equatable {}

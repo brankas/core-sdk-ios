@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.1 - 2022-04-27
+
+### Fixed
+
+-  returning of errors via **checkout** function
+
 ## 2.1.0 - 2022-04-18
 
 ### Changed

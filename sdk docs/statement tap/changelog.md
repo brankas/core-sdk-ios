@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.2 - 2022-04-29
+
+### Fixed
+
+-  returning of errors via **checkout** function when StatementRetrieval is passed
+
 ## 2.1.1 - 2022-04-27
 
 ### Fixed

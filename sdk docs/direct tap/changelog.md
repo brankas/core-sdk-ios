@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.2 - 2022-04-27
+
+### Added
+
+-  **LandBank** and **EastWest** Banks in **BankCode** enum list
+
 ## 3.1.1 - 2022-04-07
 
 ### Changed

@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ffk8oKzQxR7rT9gQ+mu0XoRprJ0=
+		afOwJS4YqulPe1mQ+cE9MsB943Y=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		IoiNQprt858H1tGdtUbOLu/6ipA=
+		GwZ4dwzeagG9sCO6fo4uNrzh5ug=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k+eFoJtVBzJdjPxJmiiU0cskNbM=
+		HpQBDOTQA006ui3plV+gPFwzjcM=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+wFOlqHozeeQTZlUoEURr0FwenI=
+		JEPfWzvYTSdp7uzapWM/Z5kzmck=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Db8ZdH36bs95DdVZGcOfSLUpFgs=
+		wws3/AdHFiPHZxSE/Euc/2kl/Ow=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -72,14 +72,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hX3rQN3N/fe1QdKeWhs2g4gp+FbS0Ypo61WTSA96EWY=
+			sWvbZ83n7HqQm2Ph51DkOT8MbtY/1urxvpnNzTmjDMY=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P9QAL62XwOlO7IAmRi6HXOXagfwoxtZdvHXOzTZ/PxI=
+			7+4Rd5DtLfJBzVUMDSYbStOVPY6K5N48A9Ioj82B15Q=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rTMybqYcv0sPV4Twc0YbFA219M9A8789ok5xoKSzgck=
+			Faeq/SQsHQtBb3n0ImVZalvkoRNG1tBMM1zqHjnzu2k=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y0XGevfsJlXt5Qv8g4a9cR4W5PhRjysbuk1oekzBUX8=
+			5ruBQlV/AOmjdTrZZzFSyx63ZkKEvS4OTxLzmZf1VEI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

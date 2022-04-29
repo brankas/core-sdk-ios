@@ -198,6 +198,8 @@ public enum BankCode : Swift.Int {
   case PERMATA
   case Dummy_Bank
   case GCash
+  case LAND_BANK
+  case EAST_WEST
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {

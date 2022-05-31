@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2022-05-26
+
+### Added
+
+- **downloadStatement()** function to return the statement list in Data format or to directly download Statement List to the mobile phone in **CSV** format
+-  support for statement retrieval for Corporate Accounts
+-  **isCorporate** field on DirectBank
+
+### Changed
+
+-  sorted returned banks from **getEnabledBanks()** function
+-  automatic bank selection when only 1 bank code is passed via **bankCodes** within **StatementTapRequest**
+-  renamed **Bank** to **StatementBank**
+-  renamed **BankCode** to **StatementBankCode**
+-  renamed **Account** to **StatementAccount**
+
+### Fixed
+
+-  enabling of autoConsent within **StatementTapRequest**
+-  retrieval of statement list when StatementRetrievalRequest is passed
+
 ## 2.1.2 - 2022-04-29
 
 ### Fixed

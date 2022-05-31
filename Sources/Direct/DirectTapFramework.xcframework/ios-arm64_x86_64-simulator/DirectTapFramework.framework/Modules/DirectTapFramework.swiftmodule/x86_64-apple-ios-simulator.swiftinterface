@@ -28,43 +28,6 @@ public struct FundTransferLimit {
   public var intrabankMaxLimit: DirectTapFramework.Amount
   public init()
 }
-public struct Bank {
-  public var bankCode: DirectTapFramework.BankCode
-  public var country: DirectTapFramework.Country
-  public var title: Swift.String
-  public var logoUrl: Swift.String
-  public var fundTransferLimit: DirectTapFramework.FundTransferLimit?
-  public var fundTransferFee: DirectTapFramework.FundTransferFee?
-  public init(bankCode: DirectTapFramework.BankCode, country: DirectTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: DirectTapFramework.FundTransferLimit?, fundTransferFee: DirectTapFramework.FundTransferFee?)
-}
-public enum BankCode : Swift.Int {
-  case Mandiri
-  case BCA
-  case BNI
-  case BRI
-  case BDO
-  case BPI
-  case BPIC
-  case KB
-  case PNB
-  case UB
-  case MB
-  case RCBC
-  case UBC
-  case CLRB
-  case BCAC
-  case SCB
-  case PERMATA
-  case Dummy_Bank
-  case GCash
-  case LAND_BANK
-  case EAST_WEST
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DirectTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: DirectTapFramework.DirectTapSF
   public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
@@ -77,7 +40,7 @@ public enum BankCode : Swift.Int {
   public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
-  public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.BankCode, closure: @escaping ([DirectTapFramework.Bank], Swift.String?) -> Swift.Void)
+  public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.DirectBankCode, closure: @escaping ([DirectTapFramework.DirectBank], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
@@ -125,7 +88,7 @@ public enum UniqueAmount : Swift.Int {
 }
 public struct Transaction {
   public var id: Swift.String
-  public var bankCode: DirectTapFramework.BankCode
+  public var bankCode: DirectTapFramework.DirectBankCode
   public var country: DirectTapFramework.Country
   public var amount: DirectTapFramework.Amount
   public var bankFee: DirectTapFramework.Amount
@@ -147,7 +110,7 @@ public struct DirectTapRequest {
       get
     }
   }
-  public var sourceAccount: DirectTapFramework.Account
+  public var sourceAccount: DirectTapFramework.DirectAccount
   public var destinationAccountId: Swift.String
   public var amount: DirectTapFramework.Amount
   public var memo: Swift.String
@@ -159,7 +122,7 @@ public struct DirectTapRequest {
   public var useRememberMe: Swift.Bool
   public var expiryDate: Foundation.Date?
   public var uniqueAmount: DirectTapFramework.UniqueAmount
-  public init(sourceAccount: DirectTapFramework.Account, destinationAccountId: Swift.String, amount: DirectTapFramework.Amount, memo: Swift.String, customer: DirectTapFramework.Customer, referenceId: Swift.String, client: DirectTapFramework.Client, dismissAlert: DirectTapFramework.DismissAlert? = nil, useRememberMe: Swift.Bool = true, expiryDate: Foundation.Date? = nil, uniqueAmount: DirectTapFramework.UniqueAmount = UniqueAmount.NONE)
+  public init(sourceAccount: DirectTapFramework.DirectAccount, destinationAccountId: Swift.String, amount: DirectTapFramework.Amount, memo: Swift.String, customer: DirectTapFramework.Customer, referenceId: Swift.String, client: DirectTapFramework.Client, dismissAlert: DirectTapFramework.DismissAlert? = nil, useRememberMe: Swift.Bool = true, expiryDate: Foundation.Date? = nil, uniqueAmount: DirectTapFramework.UniqueAmount = UniqueAmount.NONE)
 }
 public enum Currency : Swift.Int {
   case afn
@@ -334,6 +297,34 @@ public struct Customer {
   public var address: DirectTapFramework.Address?
   public init(firstName: Swift.String, lastName: Swift.String, email: Swift.String, mobileNumber: Swift.String)
 }
+public enum DirectBankCode : Swift.Int {
+  case Mandiri
+  case BCA
+  case BNI
+  case BRI
+  case BDO
+  case BPI
+  case KB
+  case PNB
+  case UB
+  case MB
+  case RCBC
+  case UBC
+  case CLRB
+  case BCAC
+  case SCB
+  case PERMATA
+  case Dummy_Bank
+  case GCash
+  case LAND_BANK
+  case EAST_WEST
+  case Unsupported
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public struct Client {
   public var displayName: Swift.String?
   public var logoUrl: Swift.String?
@@ -472,10 +463,20 @@ public enum DirectErrorCode : Swift.String {
     get
   }
 }
-public struct Account {
-  public var bankCode: DirectTapFramework.BankCode?
+public struct DirectBank {
+  public var bankCode: DirectTapFramework.DirectBankCode
   public var country: DirectTapFramework.Country
-  public init(country: DirectTapFramework.Country, bankCode: DirectTapFramework.BankCode? = nil)
+  public var title: Swift.String
+  public var logoUrl: Swift.String
+  public var fundTransferLimit: DirectTapFramework.FundTransferLimit?
+  public var fundTransferFee: DirectTapFramework.FundTransferFee?
+  public var isCorporate: Swift.Bool
+  public init(bankCode: DirectTapFramework.DirectBankCode, country: DirectTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: DirectTapFramework.FundTransferLimit?, fundTransferFee: DirectTapFramework.FundTransferFee?, isCorporate: Swift.Bool)
+}
+public struct DirectAccount {
+  public var bankCode: DirectTapFramework.DirectBankCode?
+  public var country: DirectTapFramework.Country
+  public init(country: DirectTapFramework.Country, bankCode: DirectTapFramework.DirectBankCode? = nil)
 }
 public enum Status : Swift.Int {
   case PENDING
@@ -500,9 +501,6 @@ public enum Status : Swift.Int {
     get
   }
 }
-extension DirectTapFramework.BankCode : Swift.Equatable {}
-extension DirectTapFramework.BankCode : Swift.Hashable {}
-extension DirectTapFramework.BankCode : Swift.RawRepresentable {}
 extension DirectTapFramework.DirectTapSF.TapError : Swift.Equatable {}
 extension DirectTapFramework.DirectTapSF.TapError : Swift.Hashable {}
 extension DirectTapFramework.Country : Swift.Equatable {}
@@ -516,6 +514,9 @@ extension DirectTapFramework.DirectTapRequest.BrowserMode : Swift.Hashable {}
 extension DirectTapFramework.Currency : Swift.Equatable {}
 extension DirectTapFramework.Currency : Swift.Hashable {}
 extension DirectTapFramework.Currency : Swift.RawRepresentable {}
+extension DirectTapFramework.DirectBankCode : Swift.Equatable {}
+extension DirectTapFramework.DirectBankCode : Swift.Hashable {}
+extension DirectTapFramework.DirectBankCode : Swift.RawRepresentable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Equatable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Hashable {}
 extension DirectTapFramework.DirectErrorCode : Swift.RawRepresentable {}

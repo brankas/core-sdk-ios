@@ -1,18 +1,37 @@
 # Statement Tap Framework for iOS
 ***
-*Version:* 2.1.2
+*Version:* 3.0.0
 ***
 
 
 ## Table of Contents
 
-  1. [Minimum Requirements](#requirements)
-  2. [Installation](#installation)
-  3. [Update](#update)
-  4. [Initialization](#initialization)
-  5. [Usage](#usage)
+  1. [About Framework](#about-framework)
+  2. [Minimum Requirements](#requirements)
+  3. [Installation](#installation)
+  4. [Update](#update)
+  5. [Initialization](#initialization)
+  6. [Usage](#usage)
 
 ***
+
+<a name="about-framework">
+## About Framework
+</a>
+
+### What is Statement Tap Framework?
+- **Statement Tap Framework** is a framework used to launch the interface for Tap Web Application via **Statement API** (Application Programming Interface). 
+- This framework helps mobile developers to integrate with Brankas Statement API Services with less setup needed and code implementation. 
+- With the embedded WKWebView that is provided within the Framework, users can perform logging in and bank transfers. 
+- The framework also provides the **Transaction** list object after statement retrieval has been initialized
+- The framework also gives an option to download the transaction history in CSV format
+
+### Benefits of Using Statement Tap Framework
+- **No need to setup NSURLConnection or any similar third-party library.**<br/> Everything is already built within the Framework. Just call the appropriate functions and the needed data will be returned
+- **No need to create a WKWebView or launch Safari Web Browser.**<br/>The Framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
+- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
+- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction list object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
+- **The Framework provides greater speed.**<br/>The Framework uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
 
 ## Minimum Requirements
 
@@ -56,13 +75,13 @@ To update the framework to the latest version, go to **File** > **Packages** > *
 
 ## Usage
 
-The Framework has a **checkout** function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually or let the Framework launch it via Safari Web Browser
+The Framework has a **checkout** function wherein it responds with a redirect url used to launch the Tap web application within built-in WKWebView or Safari Web Browser
 
 In order to use the checkout function, a **StatementTapRequest** is needed to be created and be passed. It has the following details:
 
 1. **country** - refers to the country of origin of the bank you wanted to do statement retrieval with. There are three countries currently supported: *Philippines (PH)*, *Indonesia (ID)* and *Thailand (TH)*
 
-2. **bankCodes** - refers to the list of banks to be shown within the Tap Web Application. If *null* value is passed, the SDK automatically fills up all the available banks depending on the country passed
+2. **bankCodes** - refers to the list of banks to be shown within the Tap Web Application. If *null* value is passed, the Framework automatically fills up all the available banks depending on the country passed
 
 3. **externalId** - refers to the identifier passed to track the request
 

@@ -1,18 +1,37 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 3.1.2
+*Version:* 3.2.0
 ***
 
 
 ## Table of Contents
 
-  1. [Minimum Requirements](#requirements)
-  2. [Installation](#installation)
-  3. [Update](#update)
-  4. [Initialization](#initialization)
-  5. [Usage](#usage)
+  1. [About Framework](#about-framework)
+  2. [Minimum Requirements](#requirements)
+  3. [Installation](#installation)
+  4. [Update](#update)
+  5. [Initialization](#initialization)
+  6. [Usage](#usage)
 
 ***
+
+<a name="about-framework">
+## About Framework
+</a>
+
+### What is Direct Tap Framework?
+- **Direct Tap Framework** is a framework used to launch the interface for Tap Web Application via **Direct API** (Application Programming Interface). 
+- This framework helps mobile developers to integrate with Brankas Direct API Services with less setup needed and code implementation. 
+- With the embedded WKWebView that is provided within the framework, users can perform logging in and bank transfers. 
+- The framework also provides the **Transaction** object after bank transfer has been successful or has failed
+
+### Benefits of Using Direct Tap Framework
+- **No need to setup NSURLConnection or any similar third-party library.**<br/> Everything is already built within the Framework. Just call the appropriate functions and the needed data will be returned
+- **No need to create a WKWebView or launch Safari Web Browser.**<br/>The Framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
+- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
+- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
+- **The Framework provides greater speed.**<br/>The Framework uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+ 
 
 ## Minimum Requirements
 
@@ -57,11 +76,11 @@ To update the framework to the latest version, go to **File** > **Packages** > *
 
 ## Usage
 
-The Framework has a **checkout** function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually (via **retrieveCheckoutURL** function) or let the Framework launch it via Safari Web Browser
+The Framework has a **checkout** function wherein it responds with a redirect url used to launch the Tap web application within built-in WKWebView or Safari Web Browser
 
 In order to use the checkout function, a **DirectTapRequest** is needed to be created and be passed. It has the following details:
 
-1. **sourceAccount** - the account to be used as a sender of money for bank transfer. It consists of **BankCode** (code for a specific bank) and **Country** (country of origin)
+1. **sourceAccount** - the account to be used as a sender of money for bank transfer. It consists of **DirectBankCode** (code for a specific bank) and **Country** (country of origin)
 
 ***NOTE:*** If **bankCode** is set to **nil**, an internal bank selection screen will be shown inside Tap web application. If it has been filled up, that bank would automatically be selected instead.
 
@@ -103,7 +122,7 @@ class ViewController: UIViewController {
         
         DirectTapSF.shared.initialize(apiKey: "hjkozDM1YcaE00q60T2qCj3s4Pb1ui0p3K2V6hjyu5AxR7A8E0IAK5G1u4sRrbcH5", certPath: nil, isDebug: true)
         
-        let account = Account(country: Country.PH)
+        let account = DirectAccount(country: Country.PH)
         let amount = Amount(currency: Currency.php, numInCents: "10000")
         let customer = Customer(firstName: "First", lastName: "Last", email: "hello@gmail.com", mobileNumber: "63")
         var client = Client()

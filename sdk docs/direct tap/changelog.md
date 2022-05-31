@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.2.0 - 2022-05-26
+
+### Added
+
+-  **isCorporate** field on DirectBank
+
+### Changed
+
+-  sorted returned banks from **getSourceBanks()** function
+-  renamed **Bank** to **DirectBank**
+-  renamed **BankCode** to **DirectBankCode**
+-  renamed **Account** to **DirectAccount**
+
 ## 3.1.2 - 2022-04-27
 
 ### Added

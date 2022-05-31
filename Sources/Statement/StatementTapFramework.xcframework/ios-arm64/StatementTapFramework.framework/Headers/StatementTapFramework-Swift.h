@@ -195,6 +195,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 @import SafariServices;
 @import UIKit;
@@ -220,6 +221,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC21StatementTapFramework14StatementTapSF")
 @interface StatementTapSF : NSObject <SFSafariViewControllerDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIDocumentPickerViewController;
+@class NSURL;
+
+@interface StatementTapSF (SWIFT_EXTENSION(StatementTapFramework)) <UIDocumentPickerDelegate>
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 @end
 
 @class WKWebView;

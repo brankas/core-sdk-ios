@@ -1,0 +1,4 @@
+framework module BalanceTapFramework {
+  header "BalanceTapFramework-Swift.h"
+  requires objc
+}

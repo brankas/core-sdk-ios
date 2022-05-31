@@ -1,0 +1,296 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios15.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BalanceTapFramework
+import CryptoKit
+import Foundation
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public struct Amount {
+  public var currency: BalanceTapFramework.Currency
+  public var numInCents: Swift.String
+  public init(currency: BalanceTapFramework.Currency, numInCents: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BalanceTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
+  public static let shared: BalanceTapFramework.BalanceTapSF
+  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
+  public func checkout(balanceTapRequest: BalanceTapFramework.BalanceTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
+  public func checkoutWithinSameScreen(balanceTapRequest: BalanceTapFramework.BalanceTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
+  public func retrieveCheckoutURL(tapRequest: BalanceTapFramework.BalanceTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
+  public func cancel()
+  public func clearRememberMe()
+  public func initSecurityCheck(delegate: BalanceTapFramework.CheckDelegate)
+  public func getBundleSeedID() -> Swift.String?
+  public func getFrameworkVersion() -> Swift.String
+  public func getEnabledBanks(country: BalanceTapFramework.Country, closure: @escaping ([BalanceTapFramework.BalanceBank], Swift.String?) -> Swift.Void)
+  public enum TapError : Swift.Error {
+    case invalidReturnAndFailUrl
+    public static func == (a: BalanceTapFramework.BalanceTapSF.TapError, b: BalanceTapFramework.BalanceTapSF.TapError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+public struct BalanceAccount {
+  public var balance: BalanceTapFramework.Amount
+  public var number: Swift.String
+  public var bankCode: BalanceTapFramework.BalanceBankCode
+  public var holderName: Swift.String
+  public var balanceId: Swift.String
+  public init(balance: BalanceTapFramework.Amount, number: Swift.String, bankCode: BalanceTapFramework.BalanceBankCode, holderName: Swift.String, balanceId: Swift.String)
+}
+public enum Country : Swift.Int {
+  case ID
+  case PH
+  case TH
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Currency : Swift.Int {
+  case afn
+  case eur
+  case all
+  case dzd
+  case usd
+  case aoa
+  case xcd
+  case ars
+  case amd
+  case awg
+  case aud
+  case azn
+  case bsd
+  case bhd
+  case bdt
+  case byr
+  case bzd
+  case xof
+  case bmd
+  case btn
+  case bov
+  case bam
+  case bwp
+  case nok
+  case brl
+  case sgd
+  case bgn
+  case bif
+  case khr
+  case xaf
+  case cad
+  case cve
+  case kyd
+  case clp
+  case cny
+  case cop
+  case kmf
+  case cdf
+  case nzd
+  case crc
+  case hrk
+  case cuc
+  case czk
+  case dkk
+  case djf
+  case dop
+  case egp
+  case ern
+  case etb
+  case fkp
+  case fjd
+  case xpf
+  case gmd
+  case gel
+  case ghs
+  case gip
+  case gtq
+  case gbp
+  case gnf
+  case gyd
+  case hnl
+  case hkd
+  case huf
+  case isk
+  case inr
+  case idr
+  case irr
+  case iqd
+  case imp
+  case ils
+  case jmd
+  case jpy
+  case jep
+  case jod
+  case kzt
+  case kes
+  case kpw
+  case krw
+  case kwd
+  case kgs
+  case lak
+  case lbp
+  case lsl
+  case lrd
+  case lyd
+  case chf
+  case mkd
+  case mga
+  case mwk
+  case myr
+  case mvr
+  case mro
+  case mur
+  case mxn
+  case mdl
+  case mnt
+  case mad
+  case mzn
+  case mmk
+  case nad
+  case npr
+  case ang
+  case nio
+  case ngn
+  case omr
+  case pkr
+  case pgk
+  case pyg
+  case pen
+  case php
+  case pln
+  case qar
+  case ron
+  case rub
+  case rwf
+  case wst
+  case std
+  case sar
+  case rsd
+  case scr
+  case sll
+  case sbd
+  case sos
+  case zar
+  case ssp
+  case lkr
+  case shp
+  case sdg
+  case srd
+  case szl
+  case sek
+  case syp
+  case twd
+  case tjs
+  case tzs
+  case thb
+  case top
+  case ttd
+  case tnd
+  case `try`
+  case tmt
+  case ugx
+  case uah
+  case are
+  case uyu
+  case uzs
+  case vuv
+  case vef
+  case vnd
+  case yer
+  case zrn
+  case zmw
+  public init(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum BalanceBankCode : Swift.Int {
+  case Mandiri
+  case BCA
+  case BNI
+  case BRI
+  case BDO
+  case BPI
+  case BPIC
+  case KB
+  case PNB
+  case UB
+  case MB
+  case RCBC
+  case UBC
+  case BCAC
+  case PERMATA
+  case Dummy_Bank
+  case Danamon
+  case Unsupported
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct DismissAlert {
+  public var message: Swift.String
+  public var cancelButtonText: Swift.String
+  public var confirmButtonText: Swift.String
+  public init(message: Swift.String, confirmButtonText: Swift.String, cancelButtonText: Swift.String)
+}
+public protocol CoreDelegate {
+  associatedtype T
+  func onResult(data: Self.T?, error: Swift.String?, errorCode: Swift.String?)
+}
+public protocol CheckDelegate {
+  func hasCheckError()
+}
+public struct BalanceBank {
+  public var bankCode: BalanceTapFramework.BalanceBankCode
+  public var country: BalanceTapFramework.Country
+  public var title: Swift.String
+  public var logoUrl: Swift.String
+  public var isCorporate: Swift.Bool
+  public init(bankCode: BalanceTapFramework.BalanceBankCode, country: BalanceTapFramework.Country, title: Swift.String, logoUrl: Swift.String, isCorporate: Swift.Bool)
+}
+public struct BalanceTapRequest {
+  public enum BrowserMode {
+    case Safari
+    case WebView
+    public static func == (a: BalanceTapFramework.BalanceTapRequest.BrowserMode, b: BalanceTapFramework.BalanceTapRequest.BrowserMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var country: BalanceTapFramework.Country
+  public var bankCodes: [BalanceTapFramework.BalanceBankCode]?
+  public var externalId: Swift.String
+  public var successURL: Swift.String
+  public var failURL: Swift.String
+  public var organizationName: Swift.String
+  public var redirectDuration: Swift.Int64
+  public var browserMode: BalanceTapFramework.BalanceTapRequest.BrowserMode
+  public var dismissAlert: BalanceTapFramework.DismissAlert?
+  public var isAutoConsent: Swift.Bool
+  public var useRememberMe: Swift.Bool
+  public init(country: BalanceTapFramework.Country, bankCodes: [BalanceTapFramework.BalanceBankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: BalanceTapFramework.BalanceTapRequest.BrowserMode = .WebView, dismissAlert: BalanceTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true)
+}
+extension BalanceTapFramework.BalanceTapSF.TapError : Swift.Equatable {}
+extension BalanceTapFramework.BalanceTapSF.TapError : Swift.Hashable {}
+extension BalanceTapFramework.Country : Swift.Equatable {}
+extension BalanceTapFramework.Country : Swift.Hashable {}
+extension BalanceTapFramework.Country : Swift.RawRepresentable {}
+extension BalanceTapFramework.Currency : Swift.Equatable {}
+extension BalanceTapFramework.Currency : Swift.Hashable {}
+extension BalanceTapFramework.Currency : Swift.RawRepresentable {}
+extension BalanceTapFramework.BalanceBankCode : Swift.Equatable {}
+extension BalanceTapFramework.BalanceBankCode : Swift.Hashable {}
+extension BalanceTapFramework.BalanceBankCode : Swift.RawRepresentable {}
+extension BalanceTapFramework.BalanceTapRequest.BrowserMode : Swift.Equatable {}
+extension BalanceTapFramework.BalanceTapRequest.BrowserMode : Swift.Hashable {}

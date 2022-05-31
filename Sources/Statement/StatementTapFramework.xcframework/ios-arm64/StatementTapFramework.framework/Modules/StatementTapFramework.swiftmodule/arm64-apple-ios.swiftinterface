@@ -167,18 +167,7 @@ public enum Currency : Swift.Int {
     get
   }
 }
-public enum TransactionStatus : Swift.Int {
-  case UNKNOWN_STATUS
-  case SUCCESS
-  case PENDING
-  case UNRECOGNIZED
-  public init(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum BankCode : Swift.Int {
+public enum StatementBankCode : Swift.Int {
   case Mandiri
   case BCA
   case BNI
@@ -192,15 +181,25 @@ public enum BankCode : Swift.Int {
   case MB
   case RCBC
   case UBC
-  case CLRB
   case BCAC
-  case SCB
   case PERMATA
   case Dummy_Bank
-  case GCash
-  case LAND_BANK
-  case EAST_WEST
+  case Danamon
+  case Go_Pay
+  case Tokopedia
+  case Unsupported
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TransactionStatus : Swift.Int {
+  case UNKNOWN_STATUS
+  case SUCCESS
+  case PENDING
+  case UNRECOGNIZED
+  public init(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -217,7 +216,7 @@ public struct StatementTapRequest {
     }
   }
   public var country: StatementTapFramework.Country
-  public var bankCodes: [StatementTapFramework.BankCode]?
+  public var bankCodes: [StatementTapFramework.StatementBankCode]?
   public var externalId: Swift.String
   public var successURL: Swift.String
   public var failURL: Swift.String
@@ -228,18 +227,13 @@ public struct StatementTapRequest {
   public var isAutoConsent: Swift.Bool
   public var useRememberMe: Swift.Bool
   public var statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest?
-  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.BankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil)
-}
-public struct Account {
-  public var bankCode: StatementTapFramework.BankCode?
-  public var country: StatementTapFramework.Country
-  public init(country: StatementTapFramework.Country, bankCode: StatementTapFramework.BankCode? = nil)
+  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.StatementBankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil)
 }
 public struct StatementAccount {
   public var id: Swift.String
   public var balance: StatementTapFramework.Amount
   public var number: Swift.String
-  public var bankCode: StatementTapFramework.BankCode
+  public var bankCode: StatementTapFramework.StatementBankCode
   public var holderName: Swift.String
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatementTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
@@ -248,12 +242,13 @@ public struct StatementAccount {
   public func checkout(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
   public func checkoutWithinSameScreen(statementTapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Any?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
   public func retrieveCheckoutURL(tapRequest: StatementTapFramework.StatementTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
+  public func downloadStatement(vc: UIKit.UIViewController, statementId: Swift.String, closure: @escaping ((Foundation.URL?, Foundation.Data?)?, Swift.String?) -> Swift.Void, enableSaving: Swift.Bool = false)
   public func cancel()
   public func clearRememberMe()
   public func initSecurityCheck(delegate: StatementTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
-  public func getEnabledBanks(country: StatementTapFramework.Country, closure: @escaping ([StatementTapFramework.Bank], Swift.String?) -> Swift.Void)
+  public func getEnabledBanks(country: StatementTapFramework.Country, closure: @escaping ([StatementTapFramework.StatementBank], Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: StatementTapFramework.StatementTapSF.TapError, b: StatementTapFramework.StatementTapSF.TapError) -> Swift.Bool
@@ -264,26 +259,9 @@ public struct StatementAccount {
   }
   @objc deinit
 }
-public struct Bank {
-  public var bankCode: StatementTapFramework.BankCode
-  public var country: StatementTapFramework.Country
-  public var title: Swift.String
-  public var logoUrl: Swift.String
-  public var fundTransferLimit: StatementTapFramework.FundTransferLimit?
-  public var fundTransferFee: StatementTapFramework.FundTransferFee?
-  public init(bankCode: StatementTapFramework.BankCode, country: StatementTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: StatementTapFramework.FundTransferLimit?, fundTransferFee: StatementTapFramework.FundTransferFee?)
-}
-public struct FundTransferFee {
-  public var idOnlineTransferLimit: StatementTapFramework.Amount
-  public var idOnlineTransferFee: StatementTapFramework.Amount
-  public var idllgTransferLimit: StatementTapFramework.Amount
-  public var idllgTransferFee: StatementTapFramework.Amount
-  public var idrtgsTransferFee: StatementTapFramework.Amount
-  public var phInstapayTransferLimit: StatementTapFramework.Amount
-  public var phInstapayTransferFee: StatementTapFramework.Amount
-  public var phPesonetTransferFee: StatementTapFramework.Amount
-  public var intrabankTransferFee: StatementTapFramework.Amount
-  public init()
+extension StatementTapFramework.StatementTapSF : UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func documentPickerWasCancelled(_ controller: UIKit.UIDocumentPickerViewController)
 }
 public enum Country : Swift.Int {
   case ID
@@ -300,14 +278,6 @@ public struct DismissAlert {
   public var cancelButtonText: Swift.String
   public var confirmButtonText: Swift.String
   public init(message: Swift.String, confirmButtonText: Swift.String, cancelButtonText: Swift.String)
-}
-public struct FundTransferLimit {
-  public var currency: StatementTapFramework.Currency
-  public var interbankMinLimit: StatementTapFramework.Amount
-  public var interbankMaxLimit: StatementTapFramework.Amount
-  public var intrabankMinLimit: StatementTapFramework.Amount
-  public var intrabankMaxLimit: StatementTapFramework.Amount
-  public init()
 }
 public enum StatementErrorCode : Swift.String {
   case STTIBDO4001
@@ -484,15 +454,23 @@ public enum TransactionType : Swift.Int {
     get
   }
 }
+public struct StatementBank {
+  public var bankCode: StatementTapFramework.StatementBankCode
+  public var country: StatementTapFramework.Country
+  public var title: Swift.String
+  public var logoUrl: Swift.String
+  public var isCorporate: Swift.Bool
+  public init(bankCode: StatementTapFramework.StatementBankCode, country: StatementTapFramework.Country, title: Swift.String, logoUrl: Swift.String, isCorporate: Swift.Bool)
+}
 extension StatementTapFramework.Currency : Swift.Equatable {}
 extension StatementTapFramework.Currency : Swift.Hashable {}
 extension StatementTapFramework.Currency : Swift.RawRepresentable {}
+extension StatementTapFramework.StatementBankCode : Swift.Equatable {}
+extension StatementTapFramework.StatementBankCode : Swift.Hashable {}
+extension StatementTapFramework.StatementBankCode : Swift.RawRepresentable {}
 extension StatementTapFramework.TransactionStatus : Swift.Equatable {}
 extension StatementTapFramework.TransactionStatus : Swift.Hashable {}
 extension StatementTapFramework.TransactionStatus : Swift.RawRepresentable {}
-extension StatementTapFramework.BankCode : Swift.Equatable {}
-extension StatementTapFramework.BankCode : Swift.Hashable {}
-extension StatementTapFramework.BankCode : Swift.RawRepresentable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Equatable {}
 extension StatementTapFramework.StatementTapRequest.BrowserMode : Swift.Hashable {}
 extension StatementTapFramework.StatementTapSF.TapError : Swift.Equatable {}

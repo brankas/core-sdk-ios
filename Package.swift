@@ -17,6 +17,9 @@ let package = Package(
         .library(
             name: "StatementTap",
             targets: ["StatementTapFramework"]),
+        .library(
+            name: "BalanceTap",
+            targets: ["BalanceTapFramework"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -31,5 +34,8 @@ let package = Package(
         .binaryTarget(
             name: "StatementTapFramework",
             path: "Sources/Statement/StatementTapFramework.xcframework"),
+        .binaryTarget(
+            name: "BalanceTapFramework",
+            path: "Sources/Balance/BalanceTapFramework.xcframework")
     ]
 )

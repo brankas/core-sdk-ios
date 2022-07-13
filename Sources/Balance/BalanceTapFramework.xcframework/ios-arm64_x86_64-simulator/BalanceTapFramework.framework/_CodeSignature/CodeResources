@@ -10,31 +10,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nf+RUeWpe3BlTTW1k5V/s3IPbCA=
+		ZUeU1pojsjUrjF69GrvC+r154bw=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OvfqD6b/kZlKlDgqoIhQyxP5nGM=
+		RWOjghyXIdTJrTgCJF6/tulWMX0=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BkKaw7Oo8oKCBKbBuouTwK+9UEU=
+		qi+Qk7ogB10Yp2rjCSv1AVrNR2g=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Q1VWMvANQIlnKa8Mh+WkK5UpbSc=
+		smhNe20Dt3XmRDxV2vNgMsdrpMg=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		oDN1bi2SU8pFjCSw+5AGUjiqtek=
+		v2zax8FnObB7r20rRMKa8fBSKMI=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		R/9vhHi3TMemLPPkCQ0uSifdpiA=
+		YbTW7TdtR9E4jyKSg4Ovm8JIeD4=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4rPmXXEzEhRkE8sK2UId3KEid8o=
+		2nwlJI2WCQISHnzlXgcX8WqAnTE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,42 +54,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xRouQRBGE3s8Y7WhCYYOEsJYLtPrb3ri8tK+r+0Zt/I=
+			WCm4auuWYdr77xVG9zFC0j0qaQJXs3jjuexlszk7lPo=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8IzaIJ48QTZ+k4aSWbZU8OqcDblmsC/4VDzBR8Mhfl0=
+			YFSZWax4NBdy3dhS/cFk8+yghhk0CUQd+y60gFJAfM0=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UQAtqxgeSXZZdrUYnMhc5JbfRyZEN+c3JZ/CEPXDbgo=
+			oDrLRYaXJHwxuLUewSvsiI49a83dlYTdYY3vwCNPI4A=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rIteCxCepblwgWC87RduH4pAm1yw6IKrYSZFjYe7q3E=
+			luQ5k/V5NBM0g3p0WFjzDnQ041BQJ7/FYmG+7k45QwA=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jrJUWccI4BvI+LVyU6EAK1X2RwTfa+2W8fkajEcfl5g=
+			zuMT70HV9WNI47J8399/FjL2xSh+XZ5sHmoTU0rbTmU=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iP7BQA2U0cmyqFUnJu1WTekwv4anRRHhuHOtoua3OGM=
+			M6q2tMBcPO3JqUNOTJVfH8ShsVENG2tronTWJ9wr+80=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

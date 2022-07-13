@@ -10,19 +10,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iQ7LUKkmQB50OJFlK0iiYcv0ubo=
+		DUVPHMKBABcIWtv2tAx0k9ipWLU=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		7lvLYPf6CsToAzBorGHlmmL/umY=
+		VmsqiGaTZhEE/EjKhPv3I+rfubk=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ZQeC+UN2L+czt2u69FwS7ks81RY=
+		UcW8nTN6gtgIhQfCK/KO09Z2Vs8=
 		</data>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iXMgAvSv+a6Ax/ALI67Ei8jwuDA=
+		W4shWpEQg9InHMILe1M6gg6Qmrs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,21 +42,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5rg6aeIOlqWp1T0WtQtbnwIsnRW6EM7THMpwL6vfHZA=
+			msrxo6B9fwAX/MYFQVJT5IhJZFkJWEg5PHj1K6bZVnc=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NqE4VR87PFARLNDcQMeojEwwp8dhxSVgXQ3PL27eY74=
+			sKdAgdRnq+NIFlUBVnstG6d23Esb1KD0aUrTYALDfjg=
 			</data>
 		</dict>
 		<key>Modules/BalanceTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vHeJ0k0Mh+zFHNAh2Sk9YfiZ0U/ei7nlUmGxM+g5wVI=
+			OKgM2OcHKZzx4v5WXJRnm6YoXYe/bRQlSOvvlMjE72Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

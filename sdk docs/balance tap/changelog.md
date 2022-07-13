@@ -1,6 +1,18 @@
-# Changelog of Balance Tap SDK
+# Changelog of Balance Tap Framework
 
 All notable changes to this project will be documented in this file.
+
+## 1.1.0 - 2022-07-08
+
+### Added
+
+-  support for balance retrieval for Corporate Accounts
+- **pngLogoUrl** field  within **BalanceBank** for the logo in PNG format
+- support for sending unlisted BankCode from **getEnabledBanks()** function to **checkout()** function
+
+### Changed
+
+-  automatic bank selection when only 1 bank code is passed via **bankCodes** within **BalanceTapRequest**
 
 ## 1.0.0 - 2022-05-26
 

@@ -212,7 +212,7 @@ public enum Currency : Swift.Int {
     get
   }
 }
-public enum BalanceBankCode : Swift.Int {
+public enum BalanceBankCode {
   case Mandiri
   case BCA
   case BNI
@@ -230,10 +230,8 @@ public enum BalanceBankCode : Swift.Int {
   case PERMATA
   case Dummy_Bank
   case Danamon
-  case Unsupported
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  case Unsupported(Swift.Int)
+  public var value: Swift.Int {
     get
   }
 }
@@ -255,8 +253,9 @@ public struct BalanceBank {
   public var country: BalanceTapFramework.Country
   public var title: Swift.String
   public var logoUrl: Swift.String
+  public var pngLogoUrl: Swift.String
   public var isCorporate: Swift.Bool
-  public init(bankCode: BalanceTapFramework.BalanceBankCode, country: BalanceTapFramework.Country, title: Swift.String, logoUrl: Swift.String, isCorporate: Swift.Bool)
+  public init(bankCode: BalanceTapFramework.BalanceBankCode, country: BalanceTapFramework.Country, title: Swift.String, logoUrl: Swift.String, pngLogoUrl: Swift.String, isCorporate: Swift.Bool)
 }
 public struct BalanceTapRequest {
   public enum BrowserMode {
@@ -289,8 +288,5 @@ extension BalanceTapFramework.Country : Swift.RawRepresentable {}
 extension BalanceTapFramework.Currency : Swift.Equatable {}
 extension BalanceTapFramework.Currency : Swift.Hashable {}
 extension BalanceTapFramework.Currency : Swift.RawRepresentable {}
-extension BalanceTapFramework.BalanceBankCode : Swift.Equatable {}
-extension BalanceTapFramework.BalanceBankCode : Swift.Hashable {}
-extension BalanceTapFramework.BalanceBankCode : Swift.RawRepresentable {}
 extension BalanceTapFramework.BalanceTapRequest.BrowserMode : Swift.Equatable {}
 extension BalanceTapFramework.BalanceTapRequest.BrowserMode : Swift.Hashable {}

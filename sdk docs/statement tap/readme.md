@@ -1,6 +1,6 @@
 # Statement Tap Framework for iOS
 ***
-*Version:* 3.0.0
+*Version:* 3.1.0
 ***
 
 
@@ -20,18 +20,26 @@
 </a>
 
 ### What is Statement Tap Framework?
-- **Statement Tap Framework** is a framework used to launch the interface for Tap Web Application via **Statement API** (Application Programming Interface). 
+- **Statement Tap Framework** is a framework used to launch Tap Web Application inside an embedded WKWebView via **Statement API** (Application Programming Interface). 
 - This framework helps mobile developers to integrate with Brankas Statement API Services with less setup needed and code implementation. 
-- With the embedded WKWebView that is provided within the Framework, users can perform logging in and bank transfers. 
-- The framework also provides the **Transaction** list object after statement retrieval has been initialized
-- The framework also gives an option to download the transaction history in CSV format
+- The framework provides the list of banks available for Transaction History Retrieval
+- The framework also provides the **Transaction** list object after transaction history retrieval has been successful or not
+- The framework also provides an option to download the transaction history in CSV format
 
 ### Benefits of Using Statement Tap Framework
-- **No need to setup NSURLConnection or any similar third-party library.**<br/> Everything is already built within the Framework. Just call the appropriate functions and the needed data will be returned
-- **No need to create a WKWebView or launch Safari Web Browser.**<br/>The Framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
-- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
-- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction list object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
+- **The framework provides everything that is needed**<br/> No need to setup NSURLConnection or any similar third-party library. Everything is already built within the framework. Just call the appropriate functions and the needed data will be returned.
+- **The framework provides User Interface**<br/>No need to create a WKWebView or launch Safari Web Browser. The framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
+- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WKWebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
+- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The balance account list object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
 - **The Framework provides greater speed.**<br/>The Framework uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+
+### How to Use 'Tap'?
+- Just follow these easy steps to perform **Transaction History Retrieval**
+1. Click **Continue** to accept terms and conditions regarding Privacy Policy in the Consent Page<br/><br/>![](screenshots/consent.png)<br/><br/>
+2. Select the desired bank in the Bank Selector Page and click **Continue**<br/><br/>![](screenshots/bank.png)<br/><br/>
+3. Enter the login credentials and click **Submit** <br/><br/>![](screenshots/login.png)<br/><br/>
+4. Enter the OTP (One-time Password) and click **Submit** <br/><br/>![](screenshots/otp.png)<br/><br/>
+5. Wait until the balance retrieval is finished. Success Page will be shown subsequently.<br/><br/>![](screenshots/success.png)<br/><br/>
 
 ## Minimum Requirements
 

@@ -167,7 +167,7 @@ public enum Currency : Swift.Int {
     get
   }
 }
-public enum StatementBankCode : Swift.Int {
+public enum StatementBankCode {
   case Mandiri
   case BCA
   case BNI
@@ -187,10 +187,8 @@ public enum StatementBankCode : Swift.Int {
   case Danamon
   case Go_Pay
   case Tokopedia
-  case Unsupported
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  case Unsupported(Swift.Int)
+  public var value: Swift.Int {
     get
   }
 }
@@ -459,15 +457,13 @@ public struct StatementBank {
   public var country: StatementTapFramework.Country
   public var title: Swift.String
   public var logoUrl: Swift.String
+  public var pngLogoUrl: Swift.String
   public var isCorporate: Swift.Bool
-  public init(bankCode: StatementTapFramework.StatementBankCode, country: StatementTapFramework.Country, title: Swift.String, logoUrl: Swift.String, isCorporate: Swift.Bool)
+  public init(bankCode: StatementTapFramework.StatementBankCode, country: StatementTapFramework.Country, title: Swift.String, logoUrl: Swift.String, pngLogoUrl: Swift.String, isCorporate: Swift.Bool)
 }
 extension StatementTapFramework.Currency : Swift.Equatable {}
 extension StatementTapFramework.Currency : Swift.Hashable {}
 extension StatementTapFramework.Currency : Swift.RawRepresentable {}
-extension StatementTapFramework.StatementBankCode : Swift.Equatable {}
-extension StatementTapFramework.StatementBankCode : Swift.Hashable {}
-extension StatementTapFramework.StatementBankCode : Swift.RawRepresentable {}
 extension StatementTapFramework.TransactionStatus : Swift.Equatable {}
 extension StatementTapFramework.TransactionStatus : Swift.Hashable {}
 extension StatementTapFramework.TransactionStatus : Swift.RawRepresentable {}

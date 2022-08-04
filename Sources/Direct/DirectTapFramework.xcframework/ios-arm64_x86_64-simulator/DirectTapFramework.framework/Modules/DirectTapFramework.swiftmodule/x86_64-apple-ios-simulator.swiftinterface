@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
 import CryptoKit
 import Foundation
@@ -41,6 +41,9 @@ public struct FundTransferLimit {
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
   public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.DirectBankCode, closure: @escaping ([DirectTapFramework.DirectBank], Swift.String?) -> Swift.Void)
+  public func getTransactionById(transactionId: Swift.String, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
+  public func getTransactionByReferenceId(referenceId: Swift.String, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
+  public func getLastTransaction(closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
@@ -297,7 +300,7 @@ public struct Customer {
   public var address: DirectTapFramework.Address?
   public init(firstName: Swift.String, lastName: Swift.String, email: Swift.String, mobileNumber: Swift.String)
 }
-public enum DirectBankCode : Swift.Int {
+public enum DirectBankCode {
   case Mandiri
   case BCA
   case BNI
@@ -318,10 +321,8 @@ public enum DirectBankCode : Swift.Int {
   case GCash
   case LAND_BANK
   case EAST_WEST
-  case Unsupported
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  case Unsupported(Swift.Int)
+  public var value: Swift.Int {
     get
   }
 }
@@ -514,9 +515,6 @@ extension DirectTapFramework.DirectTapRequest.BrowserMode : Swift.Hashable {}
 extension DirectTapFramework.Currency : Swift.Equatable {}
 extension DirectTapFramework.Currency : Swift.Hashable {}
 extension DirectTapFramework.Currency : Swift.RawRepresentable {}
-extension DirectTapFramework.DirectBankCode : Swift.Equatable {}
-extension DirectTapFramework.DirectBankCode : Swift.Hashable {}
-extension DirectTapFramework.DirectBankCode : Swift.RawRepresentable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Equatable {}
 extension DirectTapFramework.DirectErrorCode : Swift.Hashable {}
 extension DirectTapFramework.DirectErrorCode : Swift.RawRepresentable {}

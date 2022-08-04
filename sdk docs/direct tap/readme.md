@@ -1,6 +1,6 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 3.2.0
+*Version:* 3.3.0
 ***
 
 
@@ -19,18 +19,29 @@
 ## About Framework
 </a>
 
-### What is Direct Tap Framework?
-- **Direct Tap Framework** is a framework used to launch the interface for Tap Web Application via **Direct API** (Application Programming Interface). 
+## What is Direct Tap Framework?
+- **Direct Tap Framework** is a framework used to launch Tap Web Application inside an embedded WKWebView via **Direct API** (Application Programming Interface). 
 - This framework helps mobile developers to integrate with Brankas Direct API Services with less setup needed and code implementation. 
-- With the embedded WKWebView that is provided within the framework, users can perform logging in and bank transfers. 
-- The framework also provides the **Transaction** object after bank transfer has been successful or has failed
+- The framework provides list of enabled banks available for fund transfer including Fund Transfer Fee and Limit for each bank
+- The framework also provides the **Transaction** object after fund transfer has been successful or not
 
 ### Benefits of Using Direct Tap Framework
-- **No need to setup NSURLConnection or any similar third-party library.**<br/> Everything is already built within the Framework. Just call the appropriate functions and the needed data will be returned
-- **No need to create a WKWebView or launch Safari Web Browser.**<br/>The Framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
-- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
-- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
+- **The framework provides everything that is needed**<br/> No need to setup NSURLConnection or any similar third-party library. Everything is already built within the framework. Just call the appropriate functions and the needed data will be returned.
+- **The framework provides User Interface**<br/>No need to create a WKWebView or launch Safari Web Browser. The framework already provides an embedded WKWebView wherein built-in functions are done to detect successful or failed transactions
+- **The Framework provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WKWebView and create his own: the checkout URL can be used.<br/>The embedded WKWebView can be launched via another **ViewController** or be added as a **subview** of the current view passed by the developer
+- **The Framework provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The balance account list object will be returned automatically after Tap Web Application Session<br/>The framework can be updated via **SwiftPackageManager** and no longer needs any installation from third-party libraries - everything that is needed will be downloaded automatically.
 - **The Framework provides greater speed.**<br/>The Framework uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+
+### How to Use 'Tap'?
+- Just follow these easy steps to perform **Fund Transfer**
+1. Click **Continue** to accept terms and conditions regarding Privacy Policy in the Consent Page<br/><br/>![](screenshots/consent.png)<br/><br/>
+2. Select the desired bank in the Bank Selector Page and click **Continue**<br/><br/>![](screenshots/bank.png)<br/><br/>
+3. Enter the login credentials and click **Submit** <br/><br/>![](screenshots/login.png)<br/><br/>
+4. Enter the OTP (One-time Password) and click **Submit** <br/><br/>![](screenshots/otp.png)<br/><br/>
+5. Select the desired bank account to be used as the source of funds and click **Continue** <br/><br/>![](screenshots/account.png)<br/><br/>
+6. Review and check if the transaction to be done is correct and click **Continue** <br/><br/>![](screenshots/review.png)<br/><br/>
+7. Enter the OTP (One-time Password) for fund transfer and click **Submit** <br/><br/>![](screenshots/otp2.png)<br/><br/>
+8. Wait until the fund transfer is finished. Success Page will be shown subsequently.<br/><br/>![](screenshots/success.png)<br/><br/>
  
 
 ## Minimum Requirements

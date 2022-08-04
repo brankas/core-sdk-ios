@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.3.0 - 2022-07-26
+
+### Added
+
+- support for sending unlisted BankCode from **getSourceBanks()** function to **checkout()** function
+- **getTransactionById()** function to search for a transaction by passing the transaction id
+- **getTransactionByReferenceId()** function to search for a transaction by passing the reference id
+- **getLastTransaction()** function to retrieve the last transaction performed by the user  (internal only; thus, when user changes device or clears the cache, last transaction will not be returned)
+
 ## 3.2.0 - 2022-05-26
 
 ### Added

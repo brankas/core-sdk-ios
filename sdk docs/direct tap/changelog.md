@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.3.1 - 2022-09-01
+
+### Fixed
+
+- crash when sending an Unsupported BankCode via **checkout()** function
+
 ## 3.3.0 - 2022-07-26
 
 ### Added

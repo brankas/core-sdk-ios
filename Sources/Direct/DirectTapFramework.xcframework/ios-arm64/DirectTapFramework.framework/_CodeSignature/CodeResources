@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lHSggJXrr+xa+TY5gEFvVYB+Xdg=
+		k42kY1AA3dz4+kv9pECa1G3UZpA=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		xKg1IKXvWaJzBVtEJj4ZZTn+z6o=
+		9pEZ6Kdg7jQlt1V/pTUmKzMpxXI=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JQYxqmrmeqaJZS/V1baUlb915C0=
+		wPcSwAX4LC40xkC7g8uvn4r7owc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MGBlpX+x9ZnokoyJbyQX1qeyS+DFYVfJ9HW+583ElFk=
+			hQusZ0zZmgcWAZVsMNOt4UzvkMhEdVntT89W/ggC10M=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			URBHwfKoJ/4e/Ib7f7kpnzg8xE0tMf+cn+EdI6tkBXI=
+			XlJxMY/FVd9w+sTqxru9QOnPeCl0Nxe2WqX0ZUacpDs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.3.2 - 2022-10-21
+
+### Added
+
+- added **isEnabled** field in **DirectBank** to determine if bank is enabled or not as a source bank for bank transfer
+
 ## 3.3.1 - 2022-09-01
 
 ### Fixed

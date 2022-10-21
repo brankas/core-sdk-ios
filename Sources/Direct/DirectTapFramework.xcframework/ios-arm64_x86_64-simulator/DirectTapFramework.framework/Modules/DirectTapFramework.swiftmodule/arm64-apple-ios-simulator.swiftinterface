@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
 import Foundation
 import SafariServices
@@ -8,6 +9,7 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
+import _StringProcessing
 public struct FundTransferFee {
   public var idOnlineTransferLimit: DirectTapFramework.Amount
   public var idOnlineTransferFee: DirectTapFramework.Amount
@@ -472,7 +474,8 @@ public struct DirectBank {
   public var fundTransferLimit: DirectTapFramework.FundTransferLimit?
   public var fundTransferFee: DirectTapFramework.FundTransferFee?
   public var isCorporate: Swift.Bool
-  public init(bankCode: DirectTapFramework.DirectBankCode, country: DirectTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: DirectTapFramework.FundTransferLimit?, fundTransferFee: DirectTapFramework.FundTransferFee?, isCorporate: Swift.Bool)
+  public var isEnabled: Swift.Bool
+  public init(bankCode: DirectTapFramework.DirectBankCode, country: DirectTapFramework.Country, title: Swift.String, logoUrl: Swift.String, fundTransferLimit: DirectTapFramework.FundTransferLimit?, fundTransferFee: DirectTapFramework.FundTransferFee?, isCorporate: Swift.Bool, isEnabled: Swift.Bool)
 }
 public struct DirectAccount {
   public var bankCode: DirectTapFramework.DirectBankCode?

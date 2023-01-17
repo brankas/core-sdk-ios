@@ -1,6 +1,6 @@
 # Statement Tap Framework for iOS
 ***
-*Version:* 3.1.0
+*Version:* 4.0.0
 ***
 
 
@@ -12,6 +12,7 @@
   4. [Update](#update)
   5. [Initialization](#initialization)
   6. [Usage](#usage)
+  7. [App Tracking Transparency](#app-tracking-transparency) 
 
 ***
 
@@ -43,7 +44,7 @@
 
 ## Minimum Requirements
 
-1. **Xcode 12** but preferably the latest version
+1. **Xcode 14** but preferably the latest version
 2. Minimum Target iOS Deployment: **iOS 12**
 3. Minimum Swift Tools Version: **5.3** but preferably the latest version
 
@@ -112,6 +113,9 @@ In order to use the checkout function, a **StatementTapRequest** is needed to be
 
 12. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
 
+13. **includeBalance** - refers to the inclusion of balance within statement retrieval; default value is false
+
+
 Here is a sample on how to use it and call:
 
 ```swift
@@ -141,25 +145,26 @@ class ViewController: UIViewController {
             		}
         	}
         
-        	else if let statements = data as? [Statement] {
-            		var message = "Statements"
-            		let dateFormatter = DateFormatter()
-           	 	dateFormatter.dateFormat = "MM-dd-yyyy"
+        	else if let response = data as? StatementResponse {
+          		if let statements = response.statementList {
+            			let dateFormatter = DateFormatter()
+           	 		dateFormatter.dateFormat = "MM-dd-yyyy"
             
-            		if statements.isEmpty {
-                		message += "\n\n\nList is Empty"
-            		}
-            		statements.forEach { statement in
-                		statement.transactions.forEach { transaction in
-                    			let amount = transaction.amount
-                    			message += "\n Account: \(statement.account.holderName)"
-                    			message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
-                    			message += String(describing: amount.currency)
-                    			message += " \(Double(amount.numInCents) ?? 0 / 100)"
-                    			message += " \(String(describing: transaction.type))"
-                		}
-            		}
-            		print(message)
+            			if statements.isEmpty {
+                			message += "\n\n\nList is Empty"
+            			}
+            			statements.forEach { statement in
+                			statement.transactions.forEach { transaction in
+                    				let amount = transaction.amount
+                    				message += "\n Account: \(statement.account.holderName)"
+                    				message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
+                    				message += String(describing: amount.currency)
+                    				message += " \(Double(amount.numInCents) ?? 0 / 100)"
+                    				message += " \(String(describing: transaction.type))"
+                			}
+            			}
+            			print(message)
+        		}
         	}
         
         	else {
@@ -176,5 +181,55 @@ class ViewController: UIViewController {
 }
 ```
 
+<a name="app-tracking-transparency">
+## App Tracking Transparency
+</a>
 
+Starting **iOS 14.5**, Apple introduced a new feature called **App Tracking Transparency**. This new feature allows the user to decide whether the current app being used will be given a permission to track activity and usage for the purposes of advertising and data sharing. With this, iOS mobile applications have to abide certain guidelines created by Apple (https://developer.apple.com/app-store/app-privacy-details/) to ensure security and privacy of its users. Each iOS application should inform its users if sensitive information should be used through the App Tracking Transparency Framework.
+
+### What is added?
+
+Starting v4.0 of Statement Tap Framework, a new feature has been added internally - **logging of Tap Web Flow**. This feature helps Brankas to track the flow of a transaction while performing a **Statement Retrieval** within Tap Web App. This will aid in pointing out some errors within transactions and eventually improve the overall experience.
+
+### Is it necessary to integrate App Tracking Transparency Framework?
+It is not needed to integrate this Framework when using Statement Tap Framework. It is ensured that no private information of user is being sent. The logging system can only track the statement retrieval flow but will not be able to determine from which user it belongs to specifically. The data gathered will not be shared nor will be used for advertisement. The data will only be used for checking inconsistencies within a statement retrieval flow.
+
+### Can the logging feature be turned off?
+By default, the logging feature is enabled. There is an option to turn off the logging feature by changing the value of **isLoggingEnabled** within the **initialize()** function. Below is the sample call:
+
+```swift
+
+import StatementTapFramework
+
+StatementTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+
+```
+
+### App Tracking Transparency Framework Integration
+App Tracking Transparency Framework is not inherently built within Statement Tap Framework. Thus, the developer has to create the code manually within the mobile application. Below is a sample integration:
+
+```swift
+
+import StatementTapFramework
+
+    private func showTrackingPermission() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+			StatementTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: true)
+                    case .denied:
+                        fallthrough
+                    case .notDetermined:
+                        fallthrough
+                    case .restricted:
+			StatementTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+                    default:
+			StatementTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+                }
+            }
+        }
+    }
+
+```
 

@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2023-01-16
+
+### Added
+
+- **Balance Retrieval** Support (set **includeBalance** in **StatementTapRequest** to true)
+- optional internal logging to monitor API Service Calls and Tap Web Screen Flow
+- -  **isLoggingEnabled** within **initialize()** function to choose whether to enable or disable sending of logs; default value is true
+
+### Changed
+
+- returned object after calling **checkout** function to **StatementResponse** which includes **statementId**, **statementList** (when **statementRetrievalRequest** is not null) and **accountList** (when **includeBalance** is set to true)
+- **getEnabledBanks** to add support for Balance Retrieval (set **includeBalance** to true to get a combined set of banks that support both Statement and Balance Retrievals)
+
 ## 3.1.0 - 2022-07-08
 
 ### Added

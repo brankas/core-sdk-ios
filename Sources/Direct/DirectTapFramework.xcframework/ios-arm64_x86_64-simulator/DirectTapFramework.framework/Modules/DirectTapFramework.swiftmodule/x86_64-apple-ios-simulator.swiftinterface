@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
@@ -32,7 +32,7 @@ public struct FundTransferLimit {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DirectTapSF : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
   public static let shared: DirectTapFramework.DirectTapSF
-  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false)
+  public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false, isLoggingEnabled: Swift.Bool = true)
   public func checkout(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
   public func checkoutWithinSameScreen(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
   public func retrieveCheckoutURL(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
@@ -302,6 +302,15 @@ public struct Customer {
   public var address: DirectTapFramework.Address?
   public init(firstName: Swift.String, lastName: Swift.String, email: Swift.String, mobileNumber: Swift.String)
 }
+public enum Language {
+  case English
+  case Indonesian
+  case Thai
+  case Unsupported(Swift.Int)
+  public var value: Swift.Int {
+    get
+  }
+}
 public enum DirectBankCode {
   case Mandiri
   case BCA
@@ -334,6 +343,7 @@ public struct Client {
   public var returnUrl: Swift.String?
   public var failUrl: Swift.String?
   public var statementRetrieval: Swift.Bool
+  public var language: DirectTapFramework.Language
   public init()
 }
 public struct Amount {

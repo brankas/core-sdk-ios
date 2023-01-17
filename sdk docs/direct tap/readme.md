@@ -1,6 +1,6 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 3.3.2
+*Version:* 4.0.0
 ***
 
 
@@ -12,6 +12,7 @@
   4. [Update](#update)
   5. [Initialization](#initialization)
   6. [Usage](#usage)
+  7. [App Tracking Transparency](#app-tracking-transparency) 
 
 ***
 
@@ -46,7 +47,7 @@
 
 ## Minimum Requirements
 
-1. **Xcode 12** but preferably the latest version
+1. **Xcode 14** but preferably the latest version
 2. Minimum Target iOS Deployment: **iOS 12**
 3. Minimum Swift Tools Version: **5.3** but preferably the latest version
 
@@ -105,7 +106,7 @@ In order to use the checkout function, a **DirectTapRequest** is needed to be cr
 
 6. **referenceId**
 
-7. **client** - pertains to the customizations in the Tap Web Application and callback url once bank transfer is finished. It consists of **displayName** (name in the header to be shown in the Tap Web Application), **logoUrl** (URL of the logo to be shown), **returnUrl** (URL where Tap would be redirecting after bank transfer is finished), **failUrl** (optional URL where Tap would be redirecting if bank transfer has failed), **statementRetrieval** (Bool that shows the list of statements after bank transfer is finished; its default value is false)
+7. **client** - pertains to the customizations in the Tap Web Application and callback url once bank transfer is finished. It consists of **displayName** (name in the header to be shown in the Tap Web Application), **logoUrl** (URL of the logo to be shown), **returnUrl** (URL where Tap would be redirecting after bank transfer is finished), **failUrl** (optional URL where Tap would be redirecting if bank transfer has failed), **statementRetrieval** (Bool that shows the list of statements after bank transfer is finished; its default value is false), **language** (optional enum that changes the language being used within Tap Web App)
 
 8. **browserMode** -  **Safari** (Tap Web Application is launched through Safari Web Browser) and **WebView** (Tap Web application is launched through the built-in WKWebView from the Framework, this is the default value)<br/><br/>
 ***NOTE:*** When using the **WebView** BrowserMode, ensure that the ViewController to be passed in the checkout function is attached to a **UINavigationController** so that the Framework can provide a back button.
@@ -162,3 +163,55 @@ class ViewController: UIViewController {
 ```
 
 **NOTE: To check if the transaction is successful or not, check the *status* from the Transaction object**
+
+<a name="app-tracking-transparency">
+## App Tracking Transparency
+</a>
+
+Starting **iOS 14.5**, Apple introduced a new feature called **App Tracking Transparency**. This new feature allows the user to decide whether the current app being used will be given a permission to track activity and usage for the purposes of advertising and data sharing. With this, iOS mobile applications have to abide certain guidelines created by Apple (https://developer.apple.com/app-store/app-privacy-details/) to ensure security and privacy of its users. Each iOS application should inform its users if sensitive information should be used through the App Tracking Transparency Framework.
+
+### What is added?
+
+Starting v4.0 of Direct Tap Framework, a new feature has been added internally - **logging of Tap Web Flow**. This feature helps Brankas to track the flow of a transaction while performing a **Fund Transfer** within Tap Web App. This will aid in pointing out some errors within transactions and eventually improve the overall experience.
+
+### Is it necessary to integrate App Tracking Transparency Framework?
+It is not needed to integrate this Framework when using Direct Tap Framework. It is ensured that no private information of user is being sent. The logging system can only track the transaction flow but will not be able to determine from which user it belongs to specifically. The data gathered will not be shared nor will be used for advertisement. The data will only be used for checking inconsistencies within a transaction flow.
+
+### Can the logging feature be turned off?
+By default, the logging feature is enabled. There is an option to turn off the logging feature by changing the value of **isLoggingEnabled** within the **initialize()** function. Below is the sample call:
+
+```swift
+
+import DirectTapFramework
+
+DirectTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+
+```
+
+### App Tracking Transparency Framework Integration
+App Tracking Transparency Framework is not inherently built within Direct Tap Framework. Thus, the developer has to create the code manually within the mobile application. Below is a sample integration:
+
+```swift
+
+import DirectTapFramework
+
+    private func showTrackingPermission() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+			DirectTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: true)
+                    case .denied:
+                        fallthrough
+                    case .notDetermined:
+                        fallthrough
+                    case .restricted:
+			DirectTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+                    default:
+			DirectTapSF.shared.initialize(apiKey: "apiKey", isDebug: false, isLoggingEnabled: false)
+                }
+            }
+        }
+    }
+
+```

@@ -1,6 +1,6 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 4.0.0
+*Version:* 4.1.0
 ***
 
 

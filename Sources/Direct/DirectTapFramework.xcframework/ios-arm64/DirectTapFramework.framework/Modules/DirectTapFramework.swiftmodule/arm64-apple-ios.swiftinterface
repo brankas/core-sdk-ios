@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
 import Foundation
+import Network
 import SafariServices
 import Swift
 import UIKit
@@ -46,6 +47,8 @@ public struct FundTransferLimit {
   public func getTransactionById(transactionId: Swift.String, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
   public func getTransactionByReferenceId(referenceId: Swift.String, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
   public func getLastTransaction(closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void)
+  public func closeTap()
+  public func refreshTap()
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: DirectTapFramework.DirectTapSF.TapError, b: DirectTapFramework.DirectTapSF.TapError) -> Swift.Bool
@@ -350,6 +353,10 @@ public struct Amount {
   public var currency: DirectTapFramework.Currency
   public var numInCents: Swift.String
   public init(currency: DirectTapFramework.Currency, numInCents: Swift.String)
+}
+extension Network.NWInterface.InterfaceType : Swift.CaseIterable {
+  public static var allCases: [Network.NWInterface.InterfaceType]
+  public typealias AllCases = [Network.NWInterface.InterfaceType]
 }
 public enum DirectErrorCode : Swift.String {
   case DIRIBDO4001

@@ -2393,6 +2393,48 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "closeTap",
+            "printedName": "closeTap()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DirectTapFramework0aB2SFC05closeB0yyF",
+            "mangledName": "$s18DirectTapFramework0aB2SFC05closeB0yyF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshTap",
+            "printedName": "refreshTap()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DirectTapFramework0aB2SFC07refreshB0yyF",
+            "mangledName": "$s18DirectTapFramework0aB2SFC07refreshB0yyF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "TypeDecl",
             "name": "TapError",
             "printedName": "TapError",
@@ -5187,16 +5229,6 @@
         "kind": "Import",
         "name": "NIOHPACK",
         "printedName": "NIOHPACK",
-        "declKind": "Import",
-        "moduleName": "DirectTapFramework",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Reachability",
-        "printedName": "Reachability",
         "declKind": "Import",
         "moduleName": "DirectTapFramework",
         "declAttributes": [
@@ -15568,6 +15600,23 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "DirectTapFramework"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DirectTapFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "DirectErrorCode",
         "printedName": "DirectErrorCode",
@@ -21956,6 +22005,182 @@
         "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "DirectTapFramework"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InterfaceType",
+        "printedName": "InterfaceType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Network.NWInterface.InterfaceType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InterfaceType",
+                    "printedName": "Network.NWInterface.InterfaceType",
+                    "usr": "s:7Network11NWInterfaceV13InterfaceTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvpZ",
+            "mangledName": "$s7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvpZ",
+            "moduleName": "DirectTapFramework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Network.NWInterface.InterfaceType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InterfaceType",
+                        "printedName": "Network.NWInterface.InterfaceType",
+                        "usr": "s:7Network11NWInterfaceV13InterfaceTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvgZ",
+                "mangledName": "$s7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvgZ",
+                "moduleName": "DirectTapFramework",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Network.NWInterface.InterfaceType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InterfaceType",
+                        "printedName": "Network.NWInterface.InterfaceType",
+                        "usr": "s:7Network11NWInterfaceV13InterfaceTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvsZ",
+                "mangledName": "$s7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvsZ",
+                "moduleName": "DirectTapFramework",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvMZ",
+                "mangledName": "$s7Network11NWInterfaceV13InterfaceTypeO18DirectTapFrameworkE8allCasesSayAEGvMZ",
+                "moduleName": "DirectTapFramework",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7Network11NWInterfaceV13InterfaceTypeO",
+        "mangledName": "$s7Network11NWInterfaceV13InterfaceTypeO",
+        "moduleName": "Network",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Network.NWInterface.InterfaceType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InterfaceType",
+                        "printedName": "Network.NWInterface.InterfaceType",
+                        "usr": "s:7Network11NWInterfaceV13InterfaceTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -57062,42 +57287,42 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 1265,
+      "offset": 1323,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 1297,
+      "offset": 1355,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 2455,
+      "offset": 2513,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 3487,
+      "offset": 3545,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "StringLiteral",
-      "offset": 25590,
+      "offset": 25729,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 25610,
+      "offset": 25749,
       "length": 5,
       "value": "false"
     },
@@ -57734,28 +57959,28 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/core\/CoreService.swift",
       "kind": "IntegerLiteral",
-      "offset": 404,
+      "offset": 315,
       "length": 3,
       "value": "443"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/core\/CoreService.swift",
       "kind": "IntegerLiteral",
-      "offset": 949,
+      "offset": 908,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/core\/CoreService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2270,
+      "offset": 2229,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/core\/CoreService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2997,
+      "offset": 2959,
       "length": 5,
       "value": "false"
     },
@@ -59902,6 +60127,34 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/network\/NetworkConnectivityManager.swift",
+      "kind": "StringLiteral",
+      "offset": 230,
+      "length": 27,
+      "value": "\"connectivityStatusChanged\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/network\/NetworkConnectivityManager.swift",
+      "kind": "StringLiteral",
+      "offset": 595,
+      "length": 28,
+      "value": "\"NetworkConnectivityMonitor\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/network\/NetworkConnectivityManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 700,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/network\/NetworkConnectivityManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 741,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectErrorCode.swift",
       "kind": "StringLiteral",
       "offset": 192,
@@ -61794,49 +62047,49 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 524,
+      "offset": 634,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 555,
+      "offset": 665,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 582,
+      "offset": 692,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 668,
+      "offset": 778,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 810,
       "length": 17,
       "value": "\"Host App Screen\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 741,
+      "offset": 851,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6520,
+      "offset": 7984,
       "length": 5,
       "value": "false"
     }

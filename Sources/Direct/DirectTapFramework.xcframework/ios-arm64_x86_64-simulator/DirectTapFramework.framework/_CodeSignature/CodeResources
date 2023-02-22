@@ -4,65 +4,99 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		JlHwfyGmj+02gmLFDZrgLmF99oE=
+		</data>
+		<key>DirectTapView.nib</key>
+		<data>
+		RZdUAINBFNxOBSvSiw48AGcJL28=
+		</data>
 		<key>Headers/CoreFramework.h</key>
 		<data>
 		rsqhS0Yad3xWBeiQJsVk6bSM88w=
 		</data>
 		<key>Headers/DirectTapFramework-Swift.h</key>
 		<data>
-		R7tP2JZ+ViSVcOvc1g363Q8iu34=
+		9xSGKARft6+/WanRGtv/yaqyVuw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iDifcRKGc5Xkomh/A0jgu2vpr6E=
+		tdFDL63Ljp1/gnNBQpO350PINxs=
+		</data>
+		<key>Lato-Bold.ttf</key>
+		<data>
+		VCSYIh2XvuW9vM+G7oiQv46ABck=
+		</data>
+		<key>Lato-Regular.ttf</key>
+		<data>
+		6SPHLtpeUKh+GP9ccenvSztkVaM=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		RoBO8WJi30xfRaveCv1i8NMDuW0=
+		9nu76Oc/UVtYHaX/3kaSvhpjRlE=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2h0r2e7DoI0+oYTpNUr06xWszZ8=
+		FdOagEgHmcIhFwLprSuE2UkUfPk=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TENjp5NNrenAV+WfB28J03tK3HE=
+		LJc1+PIklP+zOpcLGP0/lmMbocs=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2h0r2e7DoI0+oYTpNUr06xWszZ8=
+		FdOagEgHmcIhFwLprSuE2UkUfPk=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aXAdAg5BXRHksBLynqEOiEQwOjo=
+		ymsAaf6S4Wkk9OQun3RCo8qM4jI=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		RoBO8WJi30xfRaveCv1i8NMDuW0=
+		9nu76Oc/UVtYHaX/3kaSvhpjRlE=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1zhNAd9Yd1uwdFXLwTnIydQRBm4=
+		QY+RKkN26lkSd9VVo5FbzTOUE8Y=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		72qfx7RXC6z+Ka8g0Z8XE0CZILs=
+		UWhCjXR2NQOklISrwhCz1MuX3TQ=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1zhNAd9Yd1uwdFXLwTnIydQRBm4=
+		QY+RKkN26lkSd9VVo5FbzTOUE8Y=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QY/eD3qZafHy4BTI/fhJGxk486U=
+		ytLVoGPU+VQT1kyKp9/w3MaH+Tg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		uoRlQYgYLu+4uZ/dOH13qMvuX30=
 		</data>
+		<key>Ubuntu-Regular.ttf</key>
+		<data>
+		gjjlXwMgw6vHQFfJiDZ8LyX6Nyc=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nOOMu+T72CycZU6nXx+H68VQitSs12euVNtdLDUH8d8=
+			</data>
+		</dict>
+		<key>DirectTapView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RBFPlpGtVrmJFzG9XbW3YLUCnuAPuANMV0iW0Vh/fag=
+			</data>
+		</dict>
 		<key>Headers/CoreFramework.h</key>
 		<dict>
 			<key>hash2</key>
@@ -74,77 +108,91 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k5rW/a6o/lXDlrblDYGSw7RMR50PtKiCKa51YTWxEhY=
+			DwI5FgsnfxdIcZtCozBPRwhF4eeaoo/TawzLG4lx5pA=
+			</data>
+		</dict>
+		<key>Lato-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1/C38lcPLyi1BNoRgbTXGxQgsQvixP1pCSfxyO47GcM=
+			</data>
+		</dict>
+		<key>Lato-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6CVCrtgpP0n8g8Sq6lZrH2tPx6mrXaEeb7m8CXO1Mks=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oV1aINAyxklo90NxEloTzm3YLhb0HQXWY9h83OdQ7N4=
+			yl3k5CdtqGfweD2HuNRAY/5s8ZF/sGcutTgJm7Zj6NA=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iA3FWW3+OgCq7GJVB8TAkt/ddh/Gl9/NB07Jht0weJc=
+			n2yuhqtcRmGJ0fmGA06Qvt/Kw75QcLjkhsLUEkuBEC0=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q6fxH0oRgW8Tm5bRVP8zdB/L6pg0/rq2iCPzaOXgq+c=
+			2DAlPJHcBJbmQmReSoJJF4+KQXF7dbOu18wGzxIROlY=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iA3FWW3+OgCq7GJVB8TAkt/ddh/Gl9/NB07Jht0weJc=
+			n2yuhqtcRmGJ0fmGA06Qvt/Kw75QcLjkhsLUEkuBEC0=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GTQF1JC0JYI3SIuI/zpd32NfoxgihLZLtVcpfQHibnE=
+			k1hr/dhFBDM8NYaC0oM8og5tQrCOAdwuax22gyrHV2g=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oV1aINAyxklo90NxEloTzm3YLhb0HQXWY9h83OdQ7N4=
+			yl3k5CdtqGfweD2HuNRAY/5s8ZF/sGcutTgJm7Zj6NA=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c+MSKMkcZO1uUrSMaMuwPTnryLP2yCLEbn8SYyBR8g8=
+			E3v3zljXvExm4egPWbiqN4ay5pu42NWUEIKydaGc5bo=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nLZdfX4HbBCPiTJqx06M9NtztdoEYC7U6ZZMC00fAhM=
+			QMbGxqYAGUintrQabKKMdMka0bm0LFfFoeB4xUumlQE=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c+MSKMkcZO1uUrSMaMuwPTnryLP2yCLEbn8SYyBR8g8=
+			E3v3zljXvExm4egPWbiqN4ay5pu42NWUEIKydaGc5bo=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ok+zJUnTbDIa/nWQFb+XvNLptXybqhsAgYdB/1g4ksk=
+			bMZExm5WiBMmTOQ2x2kxPIxKBTnVT4x6C2uGYC1QQ68=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +200,13 @@
 			<key>hash2</key>
 			<data>
 			JWSIsYy44tjrO54vPLaQMNhHwDa2lzEqhLKO6+ZUf6Q=
+			</data>
+		</dict>
+		<key>Ubuntu-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Zv6pwACR8l64pSZUgCO2FUeFh2qQCvLY9HKSJolpgWM=
 			</data>
 		</dict>
 	</dict>

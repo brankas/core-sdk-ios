@@ -4,45 +4,79 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		JlHwfyGmj+02gmLFDZrgLmF99oE=
+		</data>
+		<key>DirectTapView.nib</key>
+		<data>
+		RZdUAINBFNxOBSvSiw48AGcJL28=
+		</data>
 		<key>Headers/CoreFramework.h</key>
 		<data>
 		rsqhS0Yad3xWBeiQJsVk6bSM88w=
 		</data>
 		<key>Headers/DirectTapFramework-Swift.h</key>
 		<data>
-		MxPeBXROyU6hXcKI3e2C3jP3QPI=
+		flxGP6iaHlIveYCPAmpIrXVaOCE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		997ccuRiUzhk1PNi23ihy7MddVg=
+		j8kkfP62RgZTqTiCIWpXgy4QzUM=
+		</data>
+		<key>Lato-Bold.ttf</key>
+		<data>
+		VCSYIh2XvuW9vM+G7oiQv46ABck=
+		</data>
+		<key>Lato-Regular.ttf</key>
+		<data>
+		6SPHLtpeUKh+GP9ccenvSztkVaM=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		RoBO8WJi30xfRaveCv1i8NMDuW0=
+		9nu76Oc/UVtYHaX/3kaSvhpjRlE=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		AG3Q9CwxOjNAwbsKyYOt0Abaguo=
+		nppSoTABXqNvDjfN8+kJ/p++gUM=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		XfKwCALe7oBZzb4FzsaArlEQ5gE=
+		/SV3Fg0n9R/BDZ8cQDZqdc5wHLA=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		AG3Q9CwxOjNAwbsKyYOt0Abaguo=
+		nppSoTABXqNvDjfN8+kJ/p++gUM=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		16T0tsW+2qQkifpycakk8CHhDaM=
+		r9FRauJnZnJ8h0Fy4JDLVS0P/JM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		uoRlQYgYLu+4uZ/dOH13qMvuX30=
 		</data>
+		<key>Ubuntu-Regular.ttf</key>
+		<data>
+		gjjlXwMgw6vHQFfJiDZ8LyX6Nyc=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nOOMu+T72CycZU6nXx+H68VQitSs12euVNtdLDUH8d8=
+			</data>
+		</dict>
+		<key>DirectTapView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RBFPlpGtVrmJFzG9XbW3YLUCnuAPuANMV0iW0Vh/fag=
+			</data>
+		</dict>
 		<key>Headers/CoreFramework.h</key>
 		<dict>
 			<key>hash2</key>
@@ -54,42 +88,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LGRQBqssdO8hwvjKjYW6+NWSSnMK9dyRlS7PLaV2bUE=
+			QqxCQ/NX/vcAEbslI4kvk3NF6WkKfKNQy3H6jgqYk98=
+			</data>
+		</dict>
+		<key>Lato-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1/C38lcPLyi1BNoRgbTXGxQgsQvixP1pCSfxyO47GcM=
+			</data>
+		</dict>
+		<key>Lato-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6CVCrtgpP0n8g8Sq6lZrH2tPx6mrXaEeb7m8CXO1Mks=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oV1aINAyxklo90NxEloTzm3YLhb0HQXWY9h83OdQ7N4=
+			yl3k5CdtqGfweD2HuNRAY/5s8ZF/sGcutTgJm7Zj6NA=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KVeSlS30e+J3ihMbYCLP+q6LxHXMPWzRwjKvM3NMk2A=
+			bDfY+iceEaweTEWThKr97I0/6VSmxr+z9pFJIWLeGg8=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HkALRo7IZefxAeN7ETqfa1ATtt1MD8WozeSu+nv1Rn0=
+			Z7VwqmXzTGdmxHeO+cOwVHUKBzqlXuWPGKU1Zt+gDCc=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KVeSlS30e+J3ihMbYCLP+q6LxHXMPWzRwjKvM3NMk2A=
+			bDfY+iceEaweTEWThKr97I0/6VSmxr+z9pFJIWLeGg8=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FD94tanK0/urjfK9Fbm9fV1OmlnPhMI6+XgFmdZsjhk=
+			Xa67kzDxM9xV6xWFPmfmbPPVOP83+4/bdLZWlMZo+d8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -97,6 +145,13 @@
 			<key>hash2</key>
 			<data>
 			JWSIsYy44tjrO54vPLaQMNhHwDa2lzEqhLKO6+ZUf6Q=
+			</data>
+		</dict>
+		<key>Ubuntu-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Zv6pwACR8l64pSZUgCO2FUeFh2qQCvLY9HKSJolpgWM=
 			</data>
 		</dict>
 	</dict>

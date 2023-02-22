@@ -263,19 +263,28 @@ SWIFT_CLASS("_TtC18DirectTapFramework11DirectTapSF")
 @end
 
 @class WKWebView;
+@class UIView;
+@class UILabel;
+@class NSNotification;
 @class WKNavigation;
 @class WKNavigationResponse;
+@class UIButton;
 @class NSString;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @interface DirectWebViewViewController : UIViewController <WKNavigationDelegate>
+@property (nonatomic, weak) IBOutlet WKWebView * _Null_unspecified webView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified failedPage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
 - (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)Navigation;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+- (IBAction)clickDoneWithSender:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -553,19 +562,28 @@ SWIFT_CLASS("_TtC18DirectTapFramework11DirectTapSF")
 @end
 
 @class WKWebView;
+@class UIView;
+@class UILabel;
+@class NSNotification;
 @class WKNavigation;
 @class WKNavigationResponse;
+@class UIButton;
 @class NSString;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @interface DirectWebViewViewController : UIViewController <WKNavigationDelegate>
+@property (nonatomic, weak) IBOutlet WKWebView * _Null_unspecified webView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified failedPage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
 - (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)Navigation;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+- (IBAction)clickDoneWithSender:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

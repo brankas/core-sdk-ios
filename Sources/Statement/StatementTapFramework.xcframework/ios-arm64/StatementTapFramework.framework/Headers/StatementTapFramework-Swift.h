@@ -299,15 +299,24 @@ SWIFT_CLASS("_TtC21StatementTapFramework14StatementTapSF")
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 @end
 
+@class UIView;
+@class UILabel;
+@class NSNotification;
 @class WKNavigationResponse;
+@class UIButton;
 
 SWIFT_CLASS("_TtC21StatementTapFramework30StatementWebViewViewController")
 @interface StatementWebViewViewController : UIViewController <WKNavigationDelegate>
+@property (nonatomic, weak) IBOutlet WKWebView * _Null_unspecified webView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified failedPage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
 - (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)Navigation;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+- (IBAction)clickDoneWithSender:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

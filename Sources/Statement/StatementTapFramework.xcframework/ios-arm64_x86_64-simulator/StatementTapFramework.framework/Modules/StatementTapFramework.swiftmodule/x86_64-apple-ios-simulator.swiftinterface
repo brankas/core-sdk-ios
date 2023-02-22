@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
 import Foundation
+import Network
 import SafariServices
 import Swift
 import UIKit
@@ -318,6 +319,8 @@ public struct StatementAccount {
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
   public func getEnabledBanks(country: StatementTapFramework.Country, includeBalance: Swift.Bool = false, closure: @escaping ([StatementTapFramework.StatementBank], Swift.String?) -> Swift.Void)
+  public func closeTap()
+  public func refreshTap()
   public enum TapError : Swift.Error {
     case invalidReturnAndFailUrl
     public static func == (a: StatementTapFramework.StatementTapSF.TapError, b: StatementTapFramework.StatementTapSF.TapError) -> Swift.Bool
@@ -472,6 +475,10 @@ public enum StatementErrorCode : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+extension Network.NWInterface.InterfaceType : Swift.CaseIterable {
+  public static var allCases: [Network.NWInterface.InterfaceType]
+  public typealias AllCases = [Network.NWInterface.InterfaceType]
 }
 public struct StatementTransaction {
   public var id: Swift.String

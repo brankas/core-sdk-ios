@@ -1,16 +1,21 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StatementTapFramework
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
+import DeveloperToolsSupport
 import Foundation
+import LocalAuthentication
 import Network
 import SafariServices
 import Swift
+import SwiftUI
 import UIKit
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct BalanceAccount {
   public var balance: StatementTapFramework.Amount
   public var number: Swift.String
@@ -297,7 +302,8 @@ public struct StatementTapRequest {
   public var useRememberMe: Swift.Bool
   public var statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest?
   public var includeBalance: Swift.Bool
-  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.StatementBankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil, includeBalance: Swift.Bool = false)
+  public var hasPdfUpload: Swift.Bool
+  public init(country: StatementTapFramework.Country, bankCodes: [StatementTapFramework.StatementBankCode]? = nil, externalId: Swift.String, successURL: Swift.String, failURL: Swift.String, organizationName: Swift.String, redirectDuration: Swift.Int64 = 60, browserMode: StatementTapFramework.StatementTapRequest.BrowserMode = .WebView, dismissAlert: StatementTapFramework.DismissAlert? = nil, isAutoConsent: Swift.Bool = false, useRememberMe: Swift.Bool = true, statementRetrievalRequest: StatementTapFramework.StatementRetrievalRequest? = nil, includeBalance: Swift.Bool = false, hasPdfUpload: Swift.Bool = false)
 }
 public struct StatementAccount {
   public var id: Swift.String
@@ -315,7 +321,7 @@ public struct StatementAccount {
   public func downloadStatement(vc: UIKit.UIViewController, statementId: Swift.String, closure: @escaping ((Foundation.URL?, Foundation.Data?)?, Swift.String?) -> Swift.Void, enableSaving: Swift.Bool = false)
   public func cancel()
   public func clearRememberMe()
-  public func initSecurityCheck(delegate: StatementTapFramework.CheckDelegate)
+  public func initSecurityCheck(delegate: any StatementTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
   public func getEnabledBanks(country: StatementTapFramework.Country, includeBalance: Swift.Bool = false, closure: @escaping ([StatementTapFramework.StatementBank], Swift.String?) -> Swift.Void)

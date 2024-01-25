@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.2.0 - 2024-01-25
+
+### Added
+
+- **hasPdfUpload** parameter in **StatementTapRequest** to enable PDF Upload within Tap Web App
+
 ## 4.1.0 - 2023-02-22
 
 ### Added

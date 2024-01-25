@@ -1,6 +1,6 @@
 # Statement Tap Framework for iOS
 ***
-*Version:* 4.1.0
+*Version:* 4.2.0
 ***
 
 
@@ -114,6 +114,8 @@ In order to use the checkout function, a **StatementTapRequest** is needed to be
 12. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
 
 13. **includeBalance** - refers to the inclusion of balance within statement retrieval; default value is false
+
+14. **hasPdfUpload** - refers to the inclusion of uploading of PDF File via Tap Web App
 
 
 Here is a sample on how to use it and call:

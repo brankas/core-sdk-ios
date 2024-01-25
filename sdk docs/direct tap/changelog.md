@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.2.0 - 2024-01-25
+
+### Added
+
+- **Maya** DirectBankCode as Source Account
+
 ## 4.1.0 - 2023-02-22
 
 ### Added

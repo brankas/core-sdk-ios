@@ -1,16 +1,20 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
+import DeveloperToolsSupport
 import Foundation
+import LocalAuthentication
 import Network
 import SafariServices
 import Swift
+import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct FundTransferFee {
   public var idOnlineTransferLimit: DirectTapFramework.Amount
   public var idOnlineTransferFee: DirectTapFramework.Amount
@@ -40,7 +44,7 @@ public struct FundTransferLimit {
   public func cancel()
   public func clearRememberMe()
   @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
-  public func initSecurityCheck(delegate: DirectTapFramework.CheckDelegate)
+  public func initSecurityCheck(delegate: any DirectTapFramework.CheckDelegate)
   public func getBundleSeedID() -> Swift.String?
   public func getFrameworkVersion() -> Swift.String
   public func getSourceBanks(country: DirectTapFramework.Country, destinationBank: DirectTapFramework.DirectBankCode, closure: @escaping ([DirectTapFramework.DirectBank], Swift.String?) -> Swift.Void)
@@ -130,6 +134,7 @@ public struct DirectTapRequest {
   public var useRememberMe: Swift.Bool
   public var expiryDate: Foundation.Date?
   public var uniqueAmount: DirectTapFramework.UniqueAmount
+  public var useBiometrics: Swift.Bool
   public init(sourceAccount: DirectTapFramework.DirectAccount, destinationAccountId: Swift.String, amount: DirectTapFramework.Amount, memo: Swift.String, customer: DirectTapFramework.Customer, referenceId: Swift.String, client: DirectTapFramework.Client, dismissAlert: DirectTapFramework.DismissAlert? = nil, useRememberMe: Swift.Bool = true, expiryDate: Foundation.Date? = nil, uniqueAmount: DirectTapFramework.UniqueAmount = UniqueAmount.NONE)
 }
 public enum Currency : Swift.Int {
@@ -333,6 +338,7 @@ public enum DirectBankCode {
   case PERMATA
   case Dummy_Bank
   case GCash
+  case Maya
   case LAND_BANK
   case EAST_WEST
   case Unsupported(Swift.Int)

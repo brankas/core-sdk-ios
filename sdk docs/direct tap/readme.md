@@ -1,8 +1,7 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 4.1.0
+*Version:* 4.2.0
 ***
-
 
 ## Table of Contents
 

@@ -1,6 +1,6 @@
 # Direct Tap Framework for iOS
 ***
-*Version:* 4.2.0
+*Version:* 4.3.0
 ***
 
 ## Table of Contents
@@ -11,7 +11,8 @@
   4. [Update](#update)
   5. [Initialization](#initialization)
   6. [Usage](#usage)
-  7. [App Tracking Transparency](#app-tracking-transparency) 
+  7. [App Tracking Transparency](#app-tracking-transparency)
+  8. [QRPH Download](#qr)
 
 ***
 
@@ -214,3 +215,11 @@ import DirectTapFramework
     }
 
 ```
+
+<a name="qr">
+## QRPH Download
+</a>
+
+While building the app, a crash can be encountered pertaining to **NSPhotoLibraryUsageDescription** because of the need for the user to give access to the Photos Directory. To fix it, add **Privacy - Photo Library Usage Description** within **info.plist**
+
+<br/><br/>![](screenshots/photo.png)

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		yTYi7WxVe3THQImHMvF1vAjIFQA=
+		xaM2fSzP+2XxpaWp9/p5uiJ5rJk=
 		</data>
 		<key>DirectTapView.nib</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/DirectTapFramework-Swift.h</key>
 		<data>
-		X5gFHgbI5j5FkN48K6BsdxgwkUk=
+		UBV8wx1ZlyTj8PEY65xmRpexZk4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		812dRIqa9tfyvsfH69sVAgOzOgI=
+		yOcuXa9lcP6zJAJxAgYkkgW5ap0=
 		</data>
 		<key>Lato-Bold.ttf</key>
 		<data>
@@ -34,23 +34,23 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		F+r41XZjuiSQmJbAfR20uUtv2us=
+		fQHue8rk3b79NwTKZRm7wRValXE=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		CPYZ0SmFYad63UAlJXbW1cPmLCo=
+		0e9/f3/YEmEMl41D3sHpOEVJubA=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		YYV5gnmLbNz7BGpOBCA3HGBjIbo=
+		Q5PtyIFPg3JRZi1os0+XE9gH4Tc=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		CPYZ0SmFYad63UAlJXbW1cPmLCo=
+		0e9/f3/YEmEMl41D3sHpOEVJubA=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JKXgKX4B/G/eDlACZpFWwBpSVBg=
+		qnHdykjJ9sliXWT+jglw1WjD+/U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qEpyHXKXNJERu3lD4fJcSxzNp4yJGemUgErhX+xHO20=
+			SY+55phFKTxWgoUHwj1SiDjmhFq16lSuPaNheAX/wMQ=
 			</data>
 		</dict>
 		<key>DirectTapView.nib</key>
@@ -88,7 +88,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2pBsfa0qqlgtnJPDQKD3wXzy4SwxXUM/FB/27huE2Is=
+			KGUyEpa9l9Cjpx3g2bRrmEi683V78WMbE5ith0FPLwQ=
 			</data>
 		</dict>
 		<key>Lato-Bold.ttf</key>
@@ -109,35 +109,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tcSvsQP2IaBXbVWry7/cJaCurIigcZnsPcF+bAcuNlc=
+			5f8Jna3TptViV7ENcKybCyDkTOUskhKquImbB132lg8=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VjCQq6dLhWZ2HnisrR/AvgOtXIULg1nIpAlRaSoNwsc=
+			bF3FK6kBPOC0Kk4pJylg7ewhuKhWkDcVXE1tlyLDZ60=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/k9X/v1WJO+kgeJ3aDOKUMo36vCalKJinO9ATdML49g=
+			6xj2AqsHuYWKruIqXf8qB0mSafd1zzyzKXdhsKUvBro=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VjCQq6dLhWZ2HnisrR/AvgOtXIULg1nIpAlRaSoNwsc=
+			bF3FK6kBPOC0Kk4pJylg7ewhuKhWkDcVXE1tlyLDZ60=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SVbCDw8yC4jNECwozJzDduvaWWT7loeyb6laefpyyaw=
+			NeGE0NioNzi27GYaM+o7tH1QtKk2onhvq8cWIrXAyVA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

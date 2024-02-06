@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-02-05
+
+### Added
+
+- **QRPH** Download Support
+
 ## 4.2.0 - 2024-01-25
 
 ### Added

@@ -313,6 +313,9 @@ SWIFT_CLASS("_TtC18DirectTapFramework11DirectTapSF")
 @class UIView;
 @class UILabel;
 @class NSNotification;
+@class WKNavigationAction;
+@class WKDownload;
+@class UIImage;
 @class WKNavigation;
 @class WKNavigationResponse;
 @class UIButton;
@@ -329,6 +332,8 @@ SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 - (void)viewDidLoad;
 - (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
+- (void)webView:(WKWebView * _Nonnull)webView navigationAction:(WKNavigationAction * _Nonnull)navigationAction didBecomeDownload:(WKDownload * _Nonnull)download;
+- (void)saveCompleted:(UIImage * _Nonnull)image didFinishSavingWithError:(NSError * _Nullable)error contextInfo:(void const * _Nonnull)contextInfo;
 - (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)Navigation;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
 - (IBAction)clickDoneWithSender:(UIButton * _Nonnull)sender;

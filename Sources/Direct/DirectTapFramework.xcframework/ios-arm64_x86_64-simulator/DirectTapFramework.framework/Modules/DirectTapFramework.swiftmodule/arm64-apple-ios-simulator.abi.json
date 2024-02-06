@@ -110461,240 +110461,303 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4586,
-      "length": 6,
-      "value": "\"www.\""
+      "offset": 4679,
+      "length": 3,
+      "value": "\",\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4600,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4653,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4689,
-      "length": 6,
-      "value": "\"www.\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4703,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4753,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 4789,
-      "length": 6,
-      "value": "\"www.\""
-    },
-    {
-      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
-      "kind": "StringLiteral",
+      "kind": "IntegerLiteral",
       "offset": 4803,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5002,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5737,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5382,
+      "offset": 5750,
+      "length": 23,
+      "value": "\"Image has been saved.\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5868,
+      "length": 7,
+      "value": "\"Close\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5971,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6036,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 6211,
       "length": 6,
       "value": "\"www.\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5396,
+      "offset": 6225,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5453,
+      "offset": 6278,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5489,
+      "offset": 6314,
       "length": 6,
       "value": "\"www.\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5503,
+      "offset": 6328,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5557,
+      "offset": 6378,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5593,
+      "offset": 6414,
       "length": 6,
       "value": "\"www.\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5607,
+      "offset": 6428,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5643,
+      "offset": 7007,
+      "length": 6,
+      "value": "\"www.\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7021,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7078,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7114,
+      "length": 6,
+      "value": "\"www.\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7128,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7182,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7218,
+      "length": 6,
+      "value": "\"www.\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7232,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7268,
       "length": 26,
       "value": "\"Screen Change Successful\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5886,
+      "offset": 7511,
       "length": 10,
       "value": "\"\/success\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5918,
+      "offset": 7543,
       "length": 12,
       "value": "\"\/cancelled\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5952,
+      "offset": 7577,
       "length": 8,
       "value": "\"\/error\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6053,
+      "offset": 7678,
       "length": 10,
       "value": "\"\/success\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6067,
+      "offset": 7692,
       "length": 20,
       "value": "\"Success Page Shown\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6107,
+      "offset": 7732,
       "length": 12,
       "value": "\"\/cancelled\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6123,
+      "offset": 7748,
       "length": 22,
       "value": "\"Cancelled Page Shown\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6148,
+      "offset": 7773,
       "length": 20,
       "value": "\"Failure Page Shown\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6219,
+      "offset": 7844,
       "length": 10,
       "value": "\"\/success\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6302,
+      "offset": 7927,
       "length": 12,
       "value": "\"\/cancelled\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6724,
+      "offset": 8349,
       "length": 20,
       "value": "\"Success Page Shown\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6920,
+      "offset": 8545,
       "length": 16,
       "value": "\"transaction_id\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7052,
+      "offset": 8677,
       "length": 4,
       "value": "\"ec\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7492,
+      "offset": 9117,
       "length": 20,
       "value": "\"Failure Page Shown\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8086,
+      "offset": 9711,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8816,
+      "offset": 10441,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9379,
+      "offset": 11004,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11182,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/ejaytorres\/Library\/Developer\/Xcode\/DerivedData\/CoreFramework-crbuwjerqvtmkwgelemecibwlzui\/Build\/Intermediates.noindex\/ArchiveIntermediates\/DirectTapFramework\/IntermediateBuildFilesPath\/CoreFramework.build\/Release-iphonesimulator\/DirectTapFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",

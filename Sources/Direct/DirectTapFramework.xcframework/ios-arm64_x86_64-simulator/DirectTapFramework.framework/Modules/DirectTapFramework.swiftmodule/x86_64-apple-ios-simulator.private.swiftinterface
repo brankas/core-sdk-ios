@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios14.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DirectTapFramework
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios14.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DirectTapFramework
 import CryptoKit
 import DeveloperToolsSupport
 import Foundation
@@ -39,7 +38,9 @@ public struct FundTransferLimit {
   public static let shared: DirectTapFramework.DirectTapSF
   public func initialize(apiKey: Swift.String, certPath: Swift.String? = nil, isDebug: Swift.Bool = false, isLoggingEnabled: Swift.Bool = true)
   public func checkout(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
+  public func checkout(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, DirectTapFramework.DirectTapError?) -> Swift.Void, showBackButton: Swift.Bool = true) throws
   public func checkoutWithinSameScreen(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, Swift.String?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
+  public func checkoutWithinSameScreen(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (DirectTapFramework.Transaction?, DirectTapFramework.DirectTapError?) -> Swift.Void, showWithinSameScreen: Swift.Bool, showBackButton: Swift.Bool = true) throws
   public func retrieveCheckoutURL(tapRequest: DirectTapFramework.DirectTapRequest, vc: UIKit.UIViewController, closure: @escaping (Swift.String?, Swift.String?) -> Swift.Void) throws
   public func cancel()
   public func clearRememberMe()
@@ -298,6 +299,8 @@ public enum Currency : Swift.Int {
 }
 public struct DirectTapError {
   public static let shared: DirectTapFramework.DirectTapError
+  public var errorCode: Swift.String
+  public var errorMessage: Swift.String
 }
 public protocol CheckDelegate {
   func hasCheckError()

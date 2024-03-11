@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.4.0 - 2024-03-08
+
+### Added
+
+- alternate **checkout** and **checkoutWithinSameScreen** functions that return **DirectTapError** instead of just error in a form of String
+- error message and error code within **DirectTapError**
+
 ## 4.3.0 - 2024-02-05
 
 ### Added

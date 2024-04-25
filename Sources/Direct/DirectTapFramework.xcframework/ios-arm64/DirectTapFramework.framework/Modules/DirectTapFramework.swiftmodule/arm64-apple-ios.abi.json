@@ -60945,28 +60945,28 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 9137,
+      "offset": 9544,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 9167,
+      "offset": 9574,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "StringLiteral",
-      "offset": 31816,
+      "offset": 32223,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectTapSF.swift",
       "kind": "BooleanLiteral",
-      "offset": 31836,
+      "offset": 32243,
       "length": 5,
       "value": "false"
     },
@@ -65957,7 +65957,7 @@
     {
       "filePath": "\/Users\/ejaytorres\/core-sdk-ios\/CoreFramework\/tap\/direct\/DirectWebViewViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9711,
+      "offset": 10637,
       "length": 5,
       "value": "false"
     },

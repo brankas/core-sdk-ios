@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.5.0 - 2024-04-23
+
+### Fixed
+
+- Error Code having extra text (e.g. INTERNAL: DIRXXX1234) in some cases
+
+### Added
+
+- Framework logs pertaining to WKWebView activity and Network Connection
+
 ## 4.4.0 - 2024-03-08
 
 ### Added

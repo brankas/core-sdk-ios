@@ -330,6 +330,8 @@ SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
 - (void)webView:(WKWebView * _Nonnull)webView navigationAction:(WKNavigationAction * _Nonnull)navigationAction didBecomeDownload:(WKDownload * _Nonnull)download;
@@ -683,6 +685,8 @@ SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
 - (void)loadView;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (void)showOfflineDeviceUIWithNotification:(NSNotification * _Nonnull)notification;
 - (void)popScreen;
 - (void)webView:(WKWebView * _Nonnull)webView navigationAction:(WKNavigationAction * _Nonnull)navigationAction didBecomeDownload:(WKDownload * _Nonnull)download;

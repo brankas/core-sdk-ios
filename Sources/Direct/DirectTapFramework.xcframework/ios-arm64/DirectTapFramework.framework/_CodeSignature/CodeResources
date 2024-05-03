@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7fnf6OfL9nSp5QYXLCMYcRv1+Lg=
+		QIJYc++KmP2udJrP6MWG5WoSLVA=
 		</data>
 		<key>DirectTapView.nib</key>
 		<data>
-		2/wdCnQB0zl0Xt9uP7aM0u2+SZs=
+		VGixUioRQSQcu3eowDHYE14whLk=
 		</data>
 		<key>Headers/CoreFramework.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/DirectTapFramework-Swift.h</key>
 		<data>
-		kB9do0+MSiXfakGxQzZ/T//dO74=
+		YEgx6ZOdM5vkDutS5LQ6JO1mPNw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4T/9BDZ0Tq11p9ai8rB27/TahV8=
+		G5S3WOwGhCXV2EdaZa5FvNvaDTg=
 		</data>
 		<key>Lato-Bold.ttf</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		uk99fN7XHSpn2QMwbv7Z8FfGdFw=
+		fp0yP2M7ctllM/tYLpkmSw7L27A=
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ZcDPskVNfdubimG43hhXaHsi9yE=
+		skjtP8oCjGbgPUrQJcfqMo/u/64=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -60,6 +60,10 @@
 		<data>
 		gjjlXwMgw6vHQFfJiDZ8LyX6Nyc=
 		</data>
+		<key>loading-animation.json</key>
+		<data>
+		p44KYlSxTo1qbHBTXEy33iz2vSs=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -67,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l8XWNE3Ke++hNZVBH/r9dHdHm0/m4ywd5OAb3QDLa3I=
+			84h1LZZ76tevv834SzE3NtYvuUBoQBcDgYfP60JpIlw=
 			</data>
 		</dict>
 		<key>DirectTapView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DQFh8tXsFRdztFQhraSn8IRe3Zxxd+cTIWJYIy/lnWc=
+			NdIJylvR0+TgJyIwN9D+2arQesNCXp7CqyRXGd+GZjk=
 			</data>
 		</dict>
 		<key>Headers/CoreFramework.h</key>
@@ -88,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zng7w98RioTkNir4oNRRsNeVA344KjWIlqd9JFb7ODg=
+			KEJiUfo/Joj2Ma7e1V8g5FyqlDwxmNMs17ZgluN6csc=
 			</data>
 		</dict>
 		<key>Lato-Bold.ttf</key>
@@ -109,7 +113,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BVDA3sEPwcYx6t4T7rd7biDEAQtQQxuwStOhVroqcZw=
+			R5lpDJI+/5cKM54MohSMmtx4YIS5P/2RmAlo/v2QHIY=
 			</data>
 		</dict>
 		<key>Modules/DirectTapFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -137,7 +141,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			luSN1GlIOTkH6IUhXZWGZ6IR+u48XnWySc46tWbcL+8=
+			Xk5gsjFvJUesnT7J/z8+7pSbVu9Hrk9+lCjJSYUsGQI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +156,13 @@
 			<key>hash2</key>
 			<data>
 			Zv6pwACR8l64pSZUgCO2FUeFh2qQCvLY9HKSJolpgWM=
+			</data>
+		</dict>
+		<key>loading-animation.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L9iH6HoVplNP5B9QQtGrRkXKzHhgUPyFGyl3SsNm0Fk=
 			</data>
 		</dict>
 	</dict>

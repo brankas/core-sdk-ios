@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.6.0 - 2024-05-03
+
+### Fixed
+
+- Transaction being cancelled when QRPH Image Download is executed
+- Transaction returned being nil even when it is successful (when using the alternate **checkout** function that has **DirectTapError** in the closure)
+
+### Changed
+
+- QRPH Image Download Screen Flow (Added Loading Page after download)
+
 ## 4.5.0 - 2024-04-23
 
 ### Fixed

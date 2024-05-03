@@ -328,6 +328,8 @@ SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @property (nonatomic, weak) IBOutlet WKWebView * _Null_unspecified webView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified failedPage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified loadingPage;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified loadingContainerView;
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
@@ -683,6 +685,8 @@ SWIFT_CLASS("_TtC18DirectTapFramework27DirectWebViewViewController")
 @property (nonatomic, weak) IBOutlet WKWebView * _Null_unspecified webView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified failedPage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateText;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified loadingPage;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified loadingContainerView;
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;

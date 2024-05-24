@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-05-24
+
+### Added
+
+- more Bank Codes as source and destination
+- Framework logs pertaining to WKWebView activity and Network Connection
+
 ## 4.2.0 - 2024-01-25
 
 ### Added

@@ -15153,6 +15153,886 @@
           },
           {
             "kind": "Var",
+            "name": "Komo",
+            "printedName": "Komo",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO4KomoyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO4KomoyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "VCB",
+            "printedName": "VCB",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO3VCByA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO3VCByA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "AUB",
+            "printedName": "AUB",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO3AUByA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO3AUByA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "AllBank",
+            "printedName": "AllBank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO03AllD0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO03AllD0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "Robinsons_Bank",
+            "printedName": "Robinsons_Bank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO010Robinsons_D0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO010Robinsons_D0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "Security_Bank",
+            "printedName": "Security_Bank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO09Security_D0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO09Security_D0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ChinaBank",
+            "printedName": "ChinaBank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO05ChinaD0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO05ChinaD0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "Bank_Of_Commerce",
+            "printedName": "Bank_Of_Commerce",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO0D12_Of_CommerceyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO0D12_Of_CommerceyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "Card_SME_Bank",
+            "printedName": "Card_SME_Bank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO09Card_SME_D0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO09Card_SME_D0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "QueenCity_Bank",
+            "printedName": "QueenCity_Bank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO010QueenCity_D0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO010QueenCity_D0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "PSBank",
+            "printedName": "PSBank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO6PSBankyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO6PSBankyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SeaBank",
+            "printedName": "SeaBank",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO03SeaD0yA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO03SeaD0yA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GoTyme",
+            "printedName": "GoTyme",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO6GoTymeyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO6GoTymeyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "DCPay",
+            "printedName": "DCPay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO5DCPayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO5DCPayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GrabPay",
+            "printedName": "GrabPay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO7GrabPayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO7GrabPayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "PalawanPay",
+            "printedName": "PalawanPay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO10PalawanPayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO10PalawanPayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ShopeePay",
+            "printedName": "ShopeePay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO9ShopeePayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO9ShopeePayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "StarPay",
+            "printedName": "StarPay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO7StarPayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO7StarPayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "TayoCash",
+            "printedName": "TayoCash",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO8TayoCashyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO8TayoCashyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "TraxionPay",
+            "printedName": "TraxionPay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO10TraxionPayyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO10TraxionPayyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ZybiTech",
+            "printedName": "ZybiTech",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO8ZybiTechyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO8ZybiTechyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "USSC",
+            "printedName": "USSC",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DirectTapFramework.DirectBankCode.Type) -> DirectTapFramework.DirectBankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DirectBankCode",
+                    "printedName": "DirectTapFramework.DirectBankCode",
+                    "usr": "s:18DirectTapFramework0A8BankCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DirectTapFramework.DirectBankCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DirectBankCode",
+                        "printedName": "DirectTapFramework.DirectBankCode",
+                        "usr": "s:18DirectTapFramework0A8BankCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DirectTapFramework0A8BankCodeO4USSCyA2CmF",
+            "mangledName": "$s18DirectTapFramework0A8BankCodeO4USSCyA2CmF",
+            "moduleName": "DirectTapFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "Unsupported",
             "printedName": "Unsupported",
             "children": [

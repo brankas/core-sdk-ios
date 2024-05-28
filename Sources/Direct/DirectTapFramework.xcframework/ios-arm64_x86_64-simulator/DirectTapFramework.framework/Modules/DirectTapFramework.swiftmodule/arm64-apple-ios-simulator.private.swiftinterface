@@ -344,6 +344,28 @@ public enum DirectBankCode {
   case Maya
   case LAND_BANK
   case EAST_WEST
+  case Komo
+  case VCB
+  case AUB
+  case AllBank
+  case Robinsons_Bank
+  case Security_Bank
+  case ChinaBank
+  case Bank_Of_Commerce
+  case Card_SME_Bank
+  case QueenCity_Bank
+  case PSBank
+  case SeaBank
+  case GoTyme
+  case DCPay
+  case GrabPay
+  case PalawanPay
+  case ShopeePay
+  case StarPay
+  case TayoCash
+  case TraxionPay
+  case ZybiTech
+  case USSC
   case Unsupported(Swift.Int)
   public var value: Swift.Int {
     get
